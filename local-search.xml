@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>hh</title>
+    <link href="/post/hh.html"/>
+    <url>/post/hh.html</url>
+    
+    <content type="html"><![CDATA[<h3 id="h3"><a href="#h3" class="headerlink" title="h3"></a>h3</h3><p>333</p><h4 id="h4"><a href="#h4" class="headerlink" title="h4"></a>h4</h4><p>444</p><h2 id="h2"><a href="#h2" class="headerlink" title="h2"></a>h2</h2><p>222</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>分类</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>t1, t2</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hello World</title>
     <link href="/post/hello-world.html"/>
     <url>/post/hello-world.html</url>
