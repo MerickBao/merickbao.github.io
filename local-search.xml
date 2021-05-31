@@ -34,5 +34,30 @@
   
   
   
+  <entry>
+    <title>测试</title>
+    <link href="/post/test.html"/>
+    <url>/post/test.html</url>
+    
+    <content type="html"><![CDATA[<h3 id="标题1"><a href="#标题1" class="headerlink" title="标题1"></a>标题1</h3><p>文字1</p><h3 id="标题2"><a href="#标题2" class="headerlink" title="标题2"></a>标题2</h3><p>文字2</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>[object Object]</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
   
 </search>
