@@ -198,7 +198,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      945 字
+      1.5k 字
     </span>
   
 
@@ -208,7 +208,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      15
+      23
        分钟
     </span>
   
@@ -250,7 +250,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2021年6月13日 上午
+                  本文最后更新于：2021年6月23日 下午
                 
               </p>
             
@@ -286,7 +286,7 @@
   <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span>
 
-<span class="token comment">// 查询 : (x2, y2) - (x1, y1) </span>
+<span class="token comment">// 查询 : (x2, y2) --- (x1, y1)</span>
 sum <span class="token operator">=</span> prefix<span class="token punctuation">[</span>x2<span class="token punctuation">]</span><span class="token punctuation">[</span>y2<span class="token punctuation">]</span> <span class="token operator">-</span> prefix<span class="token punctuation">[</span>x1<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>y1<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
 <h2 id="二维前缀和"><a href="#二维前缀和" class="headerlink" title="二维前缀和"></a>二维前缀和</h2><p><img src="https://gitee.com/MerickBao/pic-embedding/raw/master/img/20210529174537.png" srcset="/img/loading.gif" lazyload alt="二维前缀和"></p>
 <div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 计算</span>
@@ -307,20 +307,76 @@ S_{1} = prefix[1][1] = prefix[x_{1}-1][y_{1}-1] \\
 S_{2} = prefix[1][3] - S_{1} = prefix[x_{1}-1][y_{2}] - prefix[x_{1}-1][y_{1}-1] \\
 S_{3} = prefix[3][1] - S_{1} = prefix[x_{2}][y_{1}-1] - prefix[x_{1}-1][y_{1}-1] \\
 sum = prefix[3][3] - S_{1} - S_{2} - S_{3} \\
-=prefix[x_{2}][y_{2}] + prefix[x_{1} -1][y_{1}-1] - prefix[x_{1}-1][y2] - prefix[x_{2}][y_{1}-1]</script><div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//查询 : x2 >= x1, y2 >= y1</span>
+=prefix[x_{2}][y_{2}] + prefix[x_{1} -1][y_{1}-1] - prefix[x_{1}-1][y2] - prefix[x_{2}][y_{1}-1]</script><div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//查询</span>
 <span class="token keyword">int</span> <span class="token function">getSum</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> prefix<span class="token punctuation">,</span> <span class="token keyword">int</span> x1<span class="token punctuation">,</span> <span class="token keyword">int</span> y1<span class="token punctuation">,</span> <span class="token keyword">int</span> x2<span class="token punctuation">,</span> <span class="token keyword">int</span> y2<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
   <span class="token keyword">return</span> prefix<span class="token punctuation">[</span>x2<span class="token punctuation">]</span><span class="token punctuation">[</span>y2<span class="token punctuation">]</span> <span class="token operator">+</span> prefix<span class="token punctuation">[</span>x1<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>y1<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span> prefix<span class="token punctuation">[</span>x1<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>y2<span class="token punctuation">]</span> <span class="token operator">-</span> prefix<span class="token punctuation">[</span>x2<span class="token punctuation">]</span><span class="token punctuation">[</span>y1<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></div>
+<h3 id="二维前缀和特殊用法：计算元素出现的个数"><a href="#二维前缀和特殊用法：计算元素出现的个数" class="headerlink" title="二维前缀和特殊用法：计算元素出现的个数"></a>二维前缀和特殊用法：计算元素出现的个数</h3><p>前缀和数组$prefix[r][j] - prefix[l][j]$表示在区间$（l，r）$中 元素$j$出现的次数。</p>
+<p>例如：对于数组 nums = [4, 5, 2, 2, 7, 10]$（1 \le nums[i] \le 100）$, 要求快速查询指定下标区间$l-r$之间每一个元素出现的个数。</p>
+<p>可通过构造前缀和来实现快速的查询。</p>
+<div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">int</span> n <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+<span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> prefix <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">101</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 101表示数据范围，可根据题意修改</span>
+<span class="token comment">// 构造前缀和</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+  <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span> j<span class="token operator">&lt;=</span><span class="token number">100</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token keyword">int</span> t <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">// 表示当前数是否在数组中出现</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">==</span> j<span class="token punctuation">)</span> t <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">// 出现该数</span>
+   	prefix<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> prefix<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">+</span> t<span class="token punctuation">;</span> <span class="token comment">// 前缀和更新</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment">// 查询 : 下标 1 ～ 5  之间 2 出现的个数</span>
+<span class="token keyword">int</span> res <span class="token operator">=</span> prefix<span class="token punctuation">[</span><span class="token number">5</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">-</span> prefix<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<p>相关题目：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/minimum-absolute-difference-queries/">1906. 查询差绝对值的最小值</a></p>
+<div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">minDifference</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> queries<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">int</span> n <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">,</span> m <span class="token operator">=</span> queries<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> ans <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> prefix <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">101</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// l~r 之间 1～100出现的个数</span>
+        <span class="token comment">// 计算前缀和</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span> j<span class="token operator">&lt;=</span><span class="token number">100</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+                <span class="token keyword">int</span> t <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">==</span> j<span class="token punctuation">)</span><span class="token punctuation">&#123;</span> <span class="token comment">// 当前数出现</span>
+                    t <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+                <span class="token punctuation">&#125;</span>
+                prefix<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> prefix<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">+</span> t<span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span>
+				
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>m<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+            <span class="token keyword">int</span> l <span class="token operator">=</span> queries<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> r <span class="token operator">=</span> queries<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">int</span> last <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> best <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span>MAX_VALUE<span class="token punctuation">;</span>
+          	<span class="token comment">// 枚举计算查询中的最小值</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span> j<span class="token operator">&lt;=</span><span class="token number">100</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>prefix<span class="token punctuation">[</span>r<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">-</span> prefix<span class="token punctuation">[</span>l<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+                    <span class="token keyword">if</span><span class="token punctuation">(</span>last <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment">// 只有至少出现一个数才更新答案</span>
+                        best <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">min</span><span class="token punctuation">(</span>best<span class="token punctuation">,</span> j <span class="token operator">-</span> last<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    last <span class="token operator">=</span> j<span class="token punctuation">;</span> <span class="token comment">// 更新为上一个出现的数</span>
+                <span class="token punctuation">&#125;</span>     
+            <span class="token punctuation">&#125;</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>best <span class="token operator">!=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span>MAX_VALUE<span class="token punctuation">)</span> ans<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>best<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">else</span> ans<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 所有元素都想同的情况</span>
+        <span class="token punctuation">&#125;</span>
+        
+        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> res <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>ans<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>ans<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> res<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> ans<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<p>时间复杂度：计算前缀和：$O(nC)$，查询答案:$O(qC)$，其中$n$和$q$分别是$nums$和$queries$的长度，$C$是$nums$中的最大值。总时间复杂度为：$O((n+q)C)$.</p>
+<p>空间复杂度：$O(nC)$，为存储前缀和的空间。</p>
 <h1 id="差分"><a href="#差分" class="headerlink" title="差分"></a>差分</h1><p>可以用来在$O(1)$时间内计算给一块区域的所有位置都加上或者减去一个数。</p>
 <p>主要可以分为两步：1.构建差分数组。2.进行完操作后还原</p>
-<h2 id="一维差分"><a href="#一维差分" class="headerlink" title="一维差分"></a>一维差分</h2><p><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/799/">797.差分</a><br><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/3620/">3617. 子矩形计数</a></p>
+<h2 id="一维差分"><a href="#一维差分" class="headerlink" title="一维差分"></a>一维差分</h2><p><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/799/">797.差分</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/3620/">3617. 子矩形计数</a></p>
 <p>核心公式：</p>
 <p>1.计算</p>
 <p>$diff[0] = arr[0]$</p>
 <p>$diff[i] = arr[i] - arr[i-1] (i&gt;0)$</p>
 <p>2.还原</p>
 <p>$diff[0] = diff[0]$</p>
-<p>$diff[i] = diff[i]-diff[i-1] (i&gt;0)$</p>
+<p>$diff[i] = diff[i]-diff<a href="i&gt;0">i-1</a>$</p>
 <p>例子🌰：</p>
 <p>$diff[0] = arr[0]$</p>
 <p>$diff[1] = arr[1] - arr[0]$</p>
@@ -377,6 +433,7 @@ diff<span class="token punctuation">[</span>x2<span class="token operator">+</sp
     diff<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">+=</span> diff<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">+</span> diff<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span> diff<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
   <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+
             </div>
             <hr>
             <div>
