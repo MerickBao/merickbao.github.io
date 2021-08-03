@@ -92,5 +92,32 @@
   
   
   
+  <entry>
+    <title>模版文章</title>
+    <link href="/post/hh.html"/>
+    <url>/post/hh.html</url>
+    
+    <content type="html"><![CDATA[<h3 id="标题1"><a href="#标题1" class="headerlink" title="标题1"></a>标题1</h3><p>内容dsddsdsd</p><h4 id="子标题1"><a href="#子标题1" class="headerlink" title="子标题1"></a>子标题1</h4><p>dscdsdsdfsdfsdfs<br>dsdsd<br>dsdsds<br>dsdsd</p><h2 id="标题2"><a href="#标题2" class="headerlink" title="标题2"></a>标题2</h2><p>222</p><details open>  <summary>查看代码</summary>  <div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">int a &#x3D; 0<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></details><details open>    <summary>Google Nexus 6</summary>    <p>商品详情：</p>    <dl>        <dt>屏幕</dt>        <dd>5.96” 2560x1440 QHD AMOLED display (493 ppi)</dd>        <dt>电池</dt>        <dd>3220 mAh</dd>        <dt>相机</dt>        <dd>13MP rear-facing with optical image stabilization 2MP front-facing</dd>        <dt>处理器</dt>        <dd>Qualcomm® Snapdragon™ 805 processor</dd>    </dl></details><html lang="en"><head>    <meta charset="UTF-8">    <title>Title</title>    <style>        h3 {            text-align: center;        }        #content {            text-indent: 2em;        }    </style></head><body>    <h3>从零开发一个淘宝客公众号【嗨皮搜券】</h3>    <span id="content">        春节在家期间研究了一下淘宝客开放平台，并写了一个公众号【嗨皮搜券】，        功能是可以查询淘宝和天猫内部优惠券，并生成淘口令，别人用我的淘口令        下单就可以赚取佣金啦。其实50%的淘宝商家会设置一些内部优惠券，90%的商        家会设置一些返利给推广人员帮忙推销商品，阿里妈妈美其名曰-粉丝福利购。        利用这个套路做的比较成功的有返利网、花生日记等。看一下效果，发送宝贝        标题即可搜索内部推广优惠券信息。 点击查看具体的搜券教程：         https://mp.weixin.qq.com/s/yheG6E04GHE0Hjopt4KzOg。关注【嗨皮搜券】回复<客服>添加我微信，一起学习成长吧！        用到哪些技术栈和服务？1、Node.js(基于Koa搭建后台程序)2、花生壳（内网穿透，本地开发调试）3、nginx（由于花生壳的域名被微信屏蔽，使用nginx反代理，配合花生壳本地调试使用）4、阿里云服务器（上线时使用，如果用自己的电脑的话可以不用买服务器）5、TOP（淘宝开放平台API）6、微信公众平台（开发文档）7、Logo和图片在线设计（凡科快图）   </span>    <a href="javascript:;" id="btn">        <<<收缩</a>            <script type="text/javascript">                //获取button按钮                var btn = document.getElementById('btn');                //获取p                var content = document.getElementById('content');                //获取p中的内容                var str = content.innerHTML;                //定义一个变量，表示当前的状态（收缩、展开）                var onOff = true; // true表示展开                btn.onclick = function() {                    if (onOff) {                        content.innerHTML = str.substr(0, 50) + "......";                        btn.innerHTML = '>>>展开'                    } else {                        //说明当前状态是收缩的，需要展开                        content.innerHTML = str                        btn.innerHTML = '<<<收缩';                    }                    onOff = !onOff; //每点击一次，改变一次展开、收缩状态                    return false; //阻止a标签的默认事件                }            </script></body></html><html><body>    <div class="container-fluid">        <div class="accordion" id="accordion2">            <div class="accordion-group">                <div class="accordion-heading">                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">                        点击我扩展。 再次点击我折叠。 Part I。                    </a>                </div>                <div id="collapseOne" class="accordion-body collapse" style="height: 0px; ">                    <div class="accordion-inner">                        <div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div>                    </div>                </div>            </div>        </div>    </div>    <script type="text/javascript" src="/try/bootstrap/twitter-bootstrap-v2/docs/assets/js/jquery.js"></script>    <script type="text/javascript" src="/try/bootstrap/twitter-bootstrap-v2/docs/assets/js/bootstrap-collapse.js"></script></body></html><html><p>  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true" aria-controls="collapseExample">    Link with href  </a>  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">    Button with data-target  </button></p><div class="collapse" id="collapseExample">  <div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></div></html>]]></content>
+    
+    
+    <categories>
+      
+      <category>测试分类</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>模板</tag>
+      
+      <tag>测试</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
   
 </search>
