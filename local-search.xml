@@ -100,13 +100,13 @@
       
       <tag>邻接表</tag>
       
-      <tag>邻接矩阵</tag>
-      
       <tag>Dijkstra</tag>
       
       <tag>最短路径</tag>
       
       <tag>Floyd-Warshall</tag>
+      
+      <tag>邻接矩阵</tag>
       
     </tags>
     
