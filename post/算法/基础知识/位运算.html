@@ -222,7 +222,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      191 字
+      366 字
     </span>
   
 
@@ -232,7 +232,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      2
+      5
        分钟
     </span>
   
@@ -274,25 +274,77 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2021年8月13日 晚上
+                  本文最后更新于：2021年11月17日 晚上
                 
               </p>
             
             <div class="markdown-body">
-              <h1 id="二进制枚举"><a href="#二进制枚举" class="headerlink" title="二进制枚举"></a>二进制枚举</h1><p>常用在求不同的组合的问题中，如：7 选 5 的所有组合，求集合的所有子集</p>
+              <h3 id="二进制操作"><a href="#二进制操作" class="headerlink" title="二进制操作"></a>二进制操作</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">序号</th>
+<th style="text-align:center">操作</th>
+<th style="text-align:center">代码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">计算 i 对于其子集 j 的 补集</td>
+<td style="text-align:center">i  ^  j</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">判断 i 是否为 j 的 子集</td>
+<td style="text-align:center">( i \</td>
+<td>j ) == j</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">i 去掉指定位置的 1</td>
+<td style="text-align:center">( i &amp; (~( 1 &lt;&lt; n ) ) )</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">判断 i 和 j 是否有交集</td>
+<td style="text-align:center">(i &amp; j) == 0</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">移除二进制表示中最右侧的1<br />Brian Kernighan 算法：$f(x)=x \&amp; (x-1)$</td>
+<td style="text-align:center">x = x &amp; (x - 1)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="二进制枚举"><a href="#二进制枚举" class="headerlink" title="二进制枚举"></a>二进制枚举</h3><p>常用在求不同的组合的问题中，如：7 选 5 的所有组合，求集合的所有子集</p>
 <p>原理：利用数字的「二进制表示」中 1 的位置和个数的不同来确定所有组合。</p>
 <p>例如：集合大小为7，则其所有子集共有128个（包括空集），0～128的每一数字的二进制表示代表每种子集，0代表不选该位置的元素，1表示选择。</p>
 <p><img src="https://gitee.com/MerickBao/pic-embedding/raw/master/img/20210608203127.png" srcset="/img/loading.gif" lazyload alt="二进制枚举原理"></p>
 <div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 以求大小为7的集合的子集为例</span>
-<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span> <span class="token number">1</span><span class="token operator">&lt;&lt;</span><span class="token number">7</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span> <span class="token comment">// 1&lt;&lt;7 = 128 = 2 ^ 7</span>
-  <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> j<span class="token operator">&lt;</span><span class="token number">7</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token punctuation">(</span>i <span class="token operator">>></span> j<span class="token punctuation">)</span> <span class="token operator">&amp;</span> <span class="token number">1</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span> <span class="token comment">// 表示选该位置的元素</span>
-      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">1</span><span class="token operator">&lt;&lt;</span><span class="token number">7</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">// 1&lt;&lt;7 = 128 = 2 ^ 7</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> <span class="token number">7</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>i <span class="token operator">>></span> j<span class="token punctuation">)</span> <span class="token operator">&amp;</span> <span class="token number">1</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">// 表示选该位置的元素</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
     <span class="token punctuation">&#125;</span>
-  <span class="token punctuation">&#125;</span>
-  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
-
+<h3 id="枚举二进制子集"><a href="#枚举二进制子集" class="headerlink" title="枚举二进制子集"></a>枚举二进制子集</h3><div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 枚举二进制子集</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// 枚举出i的所有二进制子集</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> i<span class="token punctuation">;</span> j <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">=</span> <span class="token punctuation">(</span>j <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span> i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>j <span class="token operator">+</span> <span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<p>输出：</p>
+<div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">1 (01)
+2 (10)
+3 2 1 (11, 10, 01)
+4 (100)
+5 4 1 (101, 100, 001)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
             </div>
             <hr>
             <div>

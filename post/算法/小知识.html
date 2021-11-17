@@ -222,7 +222,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      654 字
+      758 字
     </span>
   
 
@@ -232,7 +232,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      9
+      10
        分钟
     </span>
   
@@ -274,7 +274,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2021年8月21日 下午
+                  本文最后更新于：2021年11月17日 晚上
                 
               </p>
             
@@ -300,13 +300,14 @@
 <td style="text-align:center">1162261467</td>
 </tr>
 <tr>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
+<td style="text-align:center">int 最大值</td>
+<td style="text-align:center">2147483647</td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
+<td style="text-align:center">long 最大值</td>
+<td style="text-align:center">9223372036854775807</td>
+<td style="text-align:center">$10^{18}$</td>
 </tr>
 </tbody>
 </table>
@@ -317,49 +318,64 @@
 <tr>
 <th style="text-align:left">ID</th>
 <th style="text-align:center">Key Words</th>
-<th style="text-align:left">Conclusion</th>
+<th style="text-align:center">Conclusion</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:left">1</td>
 <td style="text-align:center">取余；MOD；乘积；</td>
-<td style="text-align:left">乘积的取余等于每个数取余的乘积再取余</td>
+<td style="text-align:center">乘积的取余等于每个数取余的乘积再取余</td>
 </tr>
 <tr>
 <td style="text-align:left">2</td>
 <td style="text-align:center">数组；</td>
-<td style="text-align:left">升序数组中任意两元素差的最小值，一定是相邻两元素的差</td>
+<td style="text-align:center">升序数组中任意两元素差的最小值，一定是相邻两元素的差</td>
 </tr>
 <tr>
 <td style="text-align:left">3</td>
 <td style="text-align:center">树；搜索树；遍历</td>
-<td style="text-align:left">二叉搜索树中序遍历得到的值为升序序列</td>
+<td style="text-align:center">二叉搜索树中序遍历得到的值为升序序列</td>
 </tr>
 <tr>
 <td style="text-align:left">4</td>
 <td style="text-align:center">同余定理</td>
-<td style="text-align:left">(a - b) % k == 0   —&gt; a % k == b % k</td>
+<td style="text-align:center">(a - b) % k == 0   —&gt; a % k == b % k</td>
 </tr>
 <tr>
 <td style="text-align:left">5</td>
 <td style="text-align:center">银行；高精度</td>
-<td style="text-align:left">银行处理数据用 BigDecimal: 可以处理任意精度的数据</td>
+<td style="text-align:center">银行处理数据用 BigDecimal: 可以处理任意精度的数据</td>
 </tr>
 <tr>
 <td style="text-align:left">6</td>
 <td style="text-align:center">三点共线</td>
-<td style="text-align:left">经过同一点的两条直线斜率相等，则两直线重合</td>
+<td style="text-align:center">经过同一点的两条直线斜率相等，则两直线重合</td>
 </tr>
 <tr>
 <td style="text-align:left">7</td>
 <td style="text-align:center">向上取整</td>
-<td style="text-align:left">（ a + b - 1) / b</td>
+<td style="text-align:center">（ a + b - 1) / b</td>
 </tr>
 <tr>
 <td style="text-align:left">8</td>
 <td style="text-align:center">四舍五入</td>
-<td style="text-align:left">（ a + b / 2) / b</td>
+<td style="text-align:center">（ a + b / 2) / b</td>
+</tr>
+<tr>
+<td style="text-align:left">9</td>
+<td style="text-align:center">组合数求和公式</td>
+<td style="text-align:center">$C<em>{n}^{0}+C</em>{n}^{1}+…+C_{n}^{n}=2^{n}$</td>
+</tr>
+<tr>
+<td style="text-align:left">10</td>
+<td style="text-align:center">偶数长度时满足</td>
+<td style="text-align:center">$C<em>{n}^{0}+C</em>{n}^{2}+…=C<em>{n}^{1}+C</em>{n}^{3}+…=2^{n-1}$</td>
+</tr>
+<tr>
+<td style="text-align:left">11</td>
+<td style="text-align:center">1~n中平方数的个数</td>
+<td style="text-align:center">$\sqrt{n}$</td>
 </tr>
 </tbody>
 </table>
@@ -414,7 +430,7 @@
 <h3 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h3><p><code>+</code>方式拼接的本质是 <code>s = new StringBuilder(s).append(&#39;char&#39;).toString();</code></p>
 <p>其中耗时最多的是<code>toString()</code>，执行一次<code>toString()</code>耗时在<code>几微米到几毫秒</code>不等。</p>
 <h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>遇到需要大量字符串拼接的场景，<strong>StringBuilder</strong>是最好的选择。</p>
-<h2 id="Java中List转int数组"><a href="#Java中List转int数组" class="headerlink" title="Java中List转int数组"></a>Java中<code>List</code>转<code>int</code>数组</h2><p>关键是<code>mapToInt</code>函数，它决定了<code>Integer</code>到<code>int</code>时值的映射关系。</p>
+<h2 id="Java中List转数组"><a href="#Java中List转数组" class="headerlink" title="Java中List转数组"></a>Java中<code>List</code>转数组</h2><h3 id="1-List-to-int-long-double"><a href="#1-List-to-int-long-double" class="headerlink" title="1.List to int/long/double"></a>1.<code>List</code> to <code>int/long/double</code></h3><p>关键是<code>mapToInt/mapToLong/mapToDouble</code>函数，它决定了<code>Integer</code>到<code>int</code>时值的映射关系。</p>
 <div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">// 1 : i -> i 为lambda表达式</span>
@@ -423,6 +439,12 @@
 
 <span class="token comment">// 2 : 使用Integer.valueOf()方法来进行值的映射</span>
 <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> c <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">mapToInt</span><span class="token punctuation">(</span><span class="token class-name">Integer</span><span class="token operator">::</span><span class="token function">valueOf</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<h3 id="2-List-to-String-Array"><a href="#2-List-to-String-Array" class="headerlink" title="2.List to String Array"></a>2.<code>List</code> to <code>String Array</code></h3><div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">></span></span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// to String Array</span>
+<span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">toArray</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// better</span>
+<span class="token comment">// or</span>
+<span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">toArray</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">[</span>list<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
             </div>
             <hr>
             <div>
@@ -439,11 +461,11 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
+                      <a class="hover-with-bg" href="/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/">小知识</a>
+                    
                       <a class="hover-with-bg" href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
                     
                       <a class="hover-with-bg" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
-                    
-                      <a class="hover-with-bg" href="/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/">小知识</a>
                     
                   </div>
                 

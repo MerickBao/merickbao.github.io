@@ -222,7 +222,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      892 字
+      898 字
     </span>
   
 
@@ -232,7 +232,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      11
+      12
        分钟
     </span>
   
@@ -274,7 +274,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2021年8月7日 下午
+                  本文最后更新于：2021年11月17日 晚上
                 
               </p>
             
@@ -282,7 +282,9 @@
               <p>题目：</p>
 <p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/find-eventual-safe-states/">802. 找到最终的安全状态</a></p>
 <p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/course-schedule-ii/">210. 课程表 II</a></p>
-<h2 id="1-Kahn算法（卡恩算法）-BFS"><a href="#1-Kahn算法（卡恩算法）-BFS" class="headerlink" title="1.Kahn算法（卡恩算法）(BFS)"></a>1.Kahn算法（卡恩算法）(BFS)</h2><p>卡恩于1962年提出了该算法。简单来说，假设L是存放结果的列表，先找到那些「入度为零」的节点，把这些节点放到L中，因为这些节点没有任何的父节点。然后把与这些节点相连的边从图中去掉，再寻找图中的入度为零的节点。对于新找到的这些入度为零的节点来说，他们的父节点已经都在L中了，所以也可以放入L。重复上述操作，直到找不到入度为零的节点。如果此时L中的元素个数和节点总数相同，说明排序完成；如果L中的元素个数和节点总数不同，说明原图中存在环，无法进行拓扑排序。</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/parallel-courses-iii/">5909. 并行课程 III</a></p>
+<h2 id="1-Kahn算法（卡恩算法）-BFS"><a href="#1-Kahn算法（卡恩算法）-BFS" class="headerlink" title="1.Kahn算法（卡恩算法）(BFS)"></a>1.Kahn算法（卡恩算法）(BFS)</h2><p>卡恩于1962年提出了该算法。简单来说，假设L是存放结果的列表，先找到那些「入度为零」的节点，把这些节点放到L中，因为这些节点没有任何的父节点。然后把与这些节点相连的边从图中去掉，再寻找图中的入度为零的节点。对于新找到的这些入度为零的节点来说，他们的父节点已经都在L中了，所以也可以放入L。重复上述操作，直到找不到入度为零的节点。如果此时L中的元素个数和节点总数相同，说明排序完成；</p>
+<p><code>如果L中的元素个数和节点总数不同，说明原图中存在环，无法进行拓扑排序。</code></p>
 <p><img src="https://gitee.com/MerickBao/pic-embedding/raw/master/img/20210805104009.png" srcset="/img/loading.gif" lazyload alt="拓扑排序"></p>
 <p>时间复杂度:$O(E+V)$，E表示边数，V表示节点数</p>
 <p>伪代码</p>
@@ -301,10 +303,10 @@ S ← 入度为零的节点的集合
 <span class="token comment">// 建立邻接表, 保存当前点能到那些节点</span>
 <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span><span class="token punctuation">></span></span> adj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
 <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> inEdge <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token class-name">N_Node</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 表示当前节点的入度</span>
-<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token class-name">N_Node</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token class-name">N_Node</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
     adj<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
-<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> edge <span class="token operator">:</span> prerequisites<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> edge <span class="token operator">:</span> prerequisites<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
     <span class="token comment">// 保存由节点出发所到达的点</span>
     adj<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>edge<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>edge<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token comment">// 所到达点的入度 + 1</span>
@@ -312,17 +314,17 @@ S ← 入度为零的节点的集合
 <span class="token punctuation">&#125;</span>
 <span class="token class-name">Queue</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> q <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LinkedList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">// 先将入度为0的节点加入队列</span>
-<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token class-name">N_Node</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>inEdge<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token class-name">N_Node</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>inEdge<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
         q<span class="token punctuation">.</span><span class="token function">offer</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span>
 <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> ans <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">while</span><span class="token punctuation">(</span><span class="token operator">!</span>q<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>q<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
     <span class="token keyword">int</span> now <span class="token operator">=</span> q<span class="token punctuation">.</span><span class="token function">poll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     ans<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>now<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> v <span class="token operator">:</span> adj<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>now<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">--</span>inEdge<span class="token punctuation">[</span>v<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> v <span class="token operator">:</span> adj<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>now<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">--</span>inEdge<span class="token punctuation">[</span>v<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
             q<span class="token punctuation">.</span><span class="token function">offer</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">&#125;</span>
     <span class="token punctuation">&#125;</span>
@@ -394,10 +396,6 @@ bool toposort() &#123;
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
-                    
-                      <a class="hover-with-bg" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
-                    
                       <a class="hover-with-bg" href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>
                     
                       <a class="hover-with-bg" href="/tags/%E9%82%BB%E6%8E%A5%E8%A1%A8/">邻接表</a>
@@ -405,6 +403,10 @@ bool toposort() &#123;
                       <a class="hover-with-bg" href="/tags/BFS/">BFS</a>
                     
                       <a class="hover-with-bg" href="/tags/DFS/">DFS</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/">拓扑排序</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%8E%AF/">环</a>
                     
                   </div>
                 
