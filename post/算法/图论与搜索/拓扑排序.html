@@ -222,7 +222,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      898 字
+      923 字
     </span>
   
 
@@ -274,7 +274,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2021年11月17日 晚上
+                  本文最后更新于：2022年3月1日 下午
                 
               </p>
             
@@ -283,6 +283,9 @@
 <p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/find-eventual-safe-states/">802. 找到最终的安全状态</a></p>
 <p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/course-schedule-ii/">210. 课程表 II</a></p>
 <p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/parallel-courses-iii/">5909. 并行课程 III</a></p>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/loud-and-rich/">851. 喧闹和富有</a></p>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/ur2n8P/">剑指 Offer II 115. 重建序列</a></p>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/Jf1JuT/">剑指 Offer II 114. 外星文字典</a></p>
 <h2 id="1-Kahn算法（卡恩算法）-BFS"><a href="#1-Kahn算法（卡恩算法）-BFS" class="headerlink" title="1.Kahn算法（卡恩算法）(BFS)"></a>1.Kahn算法（卡恩算法）(BFS)</h2><p>卡恩于1962年提出了该算法。简单来说，假设L是存放结果的列表，先找到那些「入度为零」的节点，把这些节点放到L中，因为这些节点没有任何的父节点。然后把与这些节点相连的边从图中去掉，再寻找图中的入度为零的节点。对于新找到的这些入度为零的节点来说，他们的父节点已经都在L中了，所以也可以放入L。重复上述操作，直到找不到入度为零的节点。如果此时L中的元素个数和节点总数相同，说明排序完成；</p>
 <p><code>如果L中的元素个数和节点总数不同，说明原图中存在环，无法进行拓扑排序。</code></p>
 <p><img src="https://gitee.com/MerickBao/pic-embedding/raw/master/img/20210805104009.png" srcset="/img/loading.gif" lazyload alt="拓扑排序"></p>
@@ -398,11 +401,11 @@ bool toposort() &#123;
                     
                       <a class="hover-with-bg" href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>
                     
+                      <a class="hover-with-bg" href="/tags/DFS/">DFS</a>
+                    
                       <a class="hover-with-bg" href="/tags/%E9%82%BB%E6%8E%A5%E8%A1%A8/">邻接表</a>
                     
                       <a class="hover-with-bg" href="/tags/BFS/">BFS</a>
-                    
-                      <a class="hover-with-bg" href="/tags/DFS/">DFS</a>
                     
                       <a class="hover-with-bg" href="/tags/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/">拓扑排序</a>
                     

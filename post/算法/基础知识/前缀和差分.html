@@ -232,7 +232,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      23
+      24
        分钟
     </span>
   
@@ -274,7 +274,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2021年11月17日 晚上
+                  本文最后更新于：2022年3月1日 下午
                 
               </p>
             
@@ -312,7 +312,9 @@
 
 <span class="token comment">// 查询 : (x2, y2) --- (x1, y1)</span>
 sum <span class="token operator">=</span> prefix<span class="token punctuation">[</span>x2<span class="token punctuation">]</span><span class="token punctuation">[</span>y2<span class="token punctuation">]</span> <span class="token operator">-</span> prefix<span class="token punctuation">[</span>x1<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>y1<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
-<h3 id="二维前缀和"><a href="#二维前缀和" class="headerlink" title="二维前缀和"></a>二维前缀和</h3><p><img src="https://gitee.com/MerickBao/pic-embedding/raw/master/img/20210529174537.png" srcset="/img/loading.gif" lazyload alt="二维前缀和"></p>
+<h3 id="二维前缀和"><a href="#二维前缀和" class="headerlink" title="二维前缀和"></a>二维前缀和</h3><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/matrix-block-sum/">1314. 矩阵区域和</a></p>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/range-sum-query-2d-immutable/">304. 二维区域和检索 - 矩阵不可变</a></p>
+<p><img src="https://gitee.com/MerickBao/pic-embedding/raw/master/img/20210529174537.png" srcset="/img/loading.gif" lazyload alt="二维前缀和"></p>
 <div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 计算</span>
 <span class="token comment">// prefix[i][j]表示从（0，0）到（i，j）这一矩形和总和</span>
 <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">getPrefix</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> matrix<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
@@ -394,6 +396,8 @@ sum = prefix[3][3] - S_{1} - S_{2} - S_{3} \\
 <p>主要可以分为两步：1.构建差分数组。2.进行完操作后还原</p>
 <h3 id="一维差分"><a href="#一维差分" class="headerlink" title="一维差分"></a>一维差分</h3><p><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/799/">797.差分</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/3620/">3617. 子矩形计数</a></p>
+<p>离散化差分：针对区间范围很大的情况</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/my-calendar-iii/">732. 我的日程安排表 III</a></p>
 <p>核心公式：</p>
 <p>1.计算</p>
 <p>$diff[0] = arr[0]$</p>
@@ -430,7 +434,8 @@ diff<span class="token punctuation">[</span><span class="token number">5</span><
     diff<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+=</span> diff<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
-<h3 id="二维差分"><a href="#二维差分" class="headerlink" title="二维差分"></a>二维差分</h3><p>1.构建</p>
+<h3 id="二维差分"><a href="#二维差分" class="headerlink" title="二维差分"></a>二维差分</h3><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/stamping-the-grid/">5931. 用邮票贴满网格图</a></p>
+<p>1.构建</p>
 <p><img src="https://gitee.com/MerickBao/pic-embedding/raw/master/img/20210604111903.png" srcset="/img/loading.gif" lazyload alt="二维差分"></p>
 <div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 构建</span>
 <span class="token keyword">int</span> n <span class="token operator">=</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">,</span> m <span class="token operator">=</span> arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>
@@ -439,9 +444,9 @@ diff<span class="token punctuation">[</span><span class="token number">5</span><
     <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> j <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
         <span class="token keyword">int</span> t <span class="token operator">=</span> arr<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
         diff<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">+=</span> t<span class="token punctuation">;</span>
-        diff<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+=</span> t<span class="token punctuation">;</span>
-        diff<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-=</span> t<span class="token punctuation">;</span>
-        diff<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">-=</span> t<span class="token punctuation">;</span>
+        diff<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+=</span> t<span class="token punctuation">;</span>
+        diff<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-=</span> t<span class="token punctuation">;</span>
+        diff<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">-=</span> t<span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
 <p>2.操作：为点（x1, y1) , (x2, y2)确定的矩形中的所有点都加上常数<em>c</em></p>
