@@ -18,7 +18,7 @@
   <meta name="author" content="MerickBao">
   <meta name="keywords" content="">
   
-  <title>数据库常用关键字 - MerickBaoの博客</title>
+  <title>JWT总结 - MerickBaoの博客</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -190,12 +190,12 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/bg/bg_14.jpg') no-repeat center center;
+         style="background: url('/img/bg/bg_35.png') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="数据库常用关键字">
+            <span class="h2" id="subtitle" title="JWT总结">
               
             </span>
 
@@ -210,8 +210,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-08-04 22:47" pubdate>
-        2021年8月4日 晚上
+      <time datetime="2022-07-16 20:04" pubdate>
+        2022年7月16日 晚上
       </time>
     </span>
   
@@ -222,7 +222,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      347 字
+      760 字
     </span>
   
 
@@ -232,7 +232,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      4
+      8
        分钟
     </span>
   
@@ -270,7 +270,7 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">数据库常用关键字</h1>
+            <h1 style="display: none">JWT总结</h1>
             
               <p class="note note-info">
                 
@@ -279,49 +279,44 @@
               </p>
             
             <div class="markdown-body">
-              <h2 id="常用关键字"><a href="#常用关键字" class="headerlink" title="常用关键字"></a>常用关键字</h2><h2 id="1-JOIN-（连接）关键字"><a href="#1-JOIN-（连接）关键字" class="headerlink" title="1. JOIN （连接）关键字"></a>1. JOIN （连接）关键字</h2><p><img src="https://cdn.jsdelivr.net/gh/MerickBao/picEmbedding/img/20220716194849.jpg" srcset="/img/loading.gif" lazyload alt="20210406141457"></p>
-<h3 id="1-1-INNER-JOIN：内连接：返回两表共有的部分"><a href="#1-1-INNER-JOIN：内连接：返回两表共有的部分" class="headerlink" title="1.1 INNER JOIN：内连接：返回两表共有的部分"></a>1.1 INNER JOIN：内连接：返回两表共有的部分</h3><p><img src="https://cdn.jsdelivr.net/gh/MerickBao/picEmbedding/img/20220716194922.png" srcset="/img/loading.gif" lazyload alt="20210406134312"></p>
-<div class="code-wrapper"><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">&lt;</span>select_list<span class="token operator">></span>
-<span class="token keyword">FROM</span> Table_A A
-<span class="token keyword">INNER</span> <span class="token keyword">JOIN</span> Table_B B
-<span class="token keyword">ON</span> A<span class="token punctuation">.</span><span class="token keyword">Key</span> <span class="token operator">=</span> B<span class="token punctuation">.</span><span class="token keyword">Key</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></div>
-<h3 id="1-2-LEFT-JOIN-、RIGTH-JOIN：不论键值是否匹配都会返回A（B）表所有元素，未配的值将用NULL表示"><a href="#1-2-LEFT-JOIN-、RIGTH-JOIN：不论键值是否匹配都会返回A（B）表所有元素，未配的值将用NULL表示" class="headerlink" title="1.2 LEFT JOIN 、RIGTH JOIN：不论键值是否匹配都会返回A（B）表所有元素，未配的值将用NULL表示"></a>1.2 LEFT JOIN 、RIGTH JOIN：不论键值是否匹配都会返回A（B）表所有元素，未配的值将用NULL表示</h3><center class="half">
-  <img src="https://cdn.jsdelivr.net/gh/MerickBao/picEmbedding/img/20220325220946.png" srcset="/img/loading.gif" lazyload/>
-  <img src="https://cdn.jsdelivr.net/gh/MerickBao/picEmbedding/img/20220325221016.png" srcset="/img/loading.gif" lazyload/>
-</center>
+              <h2 id="用户登陆验证"><a href="#用户登陆验证" class="headerlink" title="用户登陆验证"></a>用户登陆验证</h2><h3 id="1-基于session的用户登陆验证"><a href="#1-基于session的用户登陆验证" class="headerlink" title="1.基于session的用户登陆验证"></a>1.基于session的用户登陆验证</h3><h4 id="基本流程"><a href="#基本流程" class="headerlink" title="基本流程"></a>基本流程</h4><ul>
+<li>登陆成功之后，将<code>sessionId</code>和用户绑定（通常存放在<code>redis</code>中），以后通过<code>sessionId</code>来标识用户</li>
+<li>服务器端将<code>sessionId</code>利用「Cookie」返回给客户端</li>
+<li>客户端在以后的请求中都添加这个「Cookie」来进行请求</li>
+</ul>
+<h4 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h4><ul>
+<li><code>session</code>相关信息存储在服务器，当用户量很大时，会对服务器造成压力</li>
+<li>有安全隐患，「Cookie」被拦截，会收到请求伪造攻击</li>
+<li>不利于服务器的「横向扩展」，分布式环境下<code>session</code>需要做多机数据共享</li>
+</ul>
+<h4 id="2-基于JWT的用户token登陆验证"><a href="#2-基于JWT的用户token登陆验证" class="headerlink" title="2.基于JWT的用户token登陆验证"></a>2.基于JWT的用户token登陆验证</h4><p>JWT（JSON Web Token）基于「token」的用户认证。</p>
+<h4 id="基本流程-1"><a href="#基本流程-1" class="headerlink" title="基本流程"></a>基本流程</h4><ul>
+<li>用户输入登录信息，客户端将其密码使用RSA公钥进行加密后，发送post请求给服务器</li>
+<li>服务器收到请求后进行解密验证用户信息合法性，验证成功后返回服务器生成的用户「token」给客户端</li>
+<li>客户端收到「token」之后，将其存储在本地（一般存储在<code>localStorage</code>,<code>cookie</code>,<code>sessionStorage</code>）</li>
+<li>客户端之后的HTTP请求都需要将「token」添加到请求头里边</li>
+<li>服务器解码JWT，如果用户令牌还在有效期内，则接受请求，否则返回提示信息要求客户端重新获取「token」</li>
+</ul>
+<h4 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h4><ul>
+<li>「token」是无状态的，服务器不需要保存令牌相关信息，不会造成服务器压力</li>
+<li>可拓展性好，多机只需使用相同的JWT算法即可实现用户认证</li>
+</ul>
+<h4 id="缺点-1"><a href="#缺点-1" class="headerlink" title="缺点"></a>缺点</h4><ul>
+<li>JWT的载荷（playload）使用<code>base64</code>编码，并没有加密，所以JWT中不能存放敏感数据，安全性对于<code>session</code>来说较低。</li>
+<li>由于JWT是无状态的，所以相关数据都存放在JWT的载荷之中，导致编码后JWT会很长，可能会超出<code>cookie</code>的大小限制（4K），一般存放在「local stroage」中，并且会导致http请求的开销较大。</li>
+<li>JWT是一次性的，需要控制好「token」的过期时间，避免多次获取「token」（也可以设置双「token」机制来减少用户登陆次数，只要用户「访问token」没用过期，就可以直接生成「用户token」实现用户的无感认证）</li>
+</ul>
+<h3 id="3-JWT认证原理"><a href="#3-JWT认证原理" class="headerlink" title="3.JWT认证原理"></a>3.JWT认证原理</h3><h4 id="JWT的组成部分"><a href="#JWT的组成部分" class="headerlink" title="JWT的组成部分"></a>JWT的组成部分</h4><ul>
+<li>头部：描述JWT的最基本信息，如类型、签名所用的算法等</li>
+<li>载荷（Playload）：存放一些不敏感信息，如该JWT的签发者、面向的用户、过期时间（Unix时间戳）、签发的时间等信息</li>
+<li>签名：将头部和载荷分别进行<code>base64</code>编码后使用<code>.</code>将两部分拼接在一起，然后使用「头部」中指定的加密算法对拼接得到的字符串进行加密，得到用户「token」。由于消息体是透明的，签名可以保证消息不被篡改。</li>
+</ul>
+<p>实例：</p>
+<p>token</p>
+<div class="code-wrapper"><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">eyJraWQiOiIyIiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiLnrb7lj5HogIUiLCJleHAiOjE2NTY2NjY5NTV9.OSifVMWPXGIpZSnQnQmHqfX5owjkFThQTdC1AB2noEvqdjbvYXizOjMzhONTISsllqP34FZn5rmeR5dgmscMXCwXB75i-VfwCa5tf0KiaSfwYYxR-ZzCF4AN8qFikhig3I0oxbEaFde4QB5K4uFuItwIdJaJMnSYLAnt1kLowes<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div>
+<p>可以通过解密工具解析出头部和载荷信息：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/MerickBao/picEmbedding/img/20220701172645.png" srcset="/img/loading.gif" lazyload alt="image-20220701172644469"></p>
 
-
-
-<div class="code-wrapper"><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">&lt;</span>select_list<span class="token operator">></span>
-<span class="token keyword">FROM</span> Table_A a
-<span class="token keyword">LEFT</span> <span class="token keyword">JOIN</span> Table_B b
-<span class="token keyword">ON</span> a<span class="token punctuation">.</span><span class="token keyword">key</span> <span class="token operator">=</span> b<span class="token punctuation">.</span><span class="token keyword">key</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></div>
-<h3 id="1-3-OUTER-JOIN（FULL-OUTER-JOIN、FULL-JOIN）：返回两表所有元素，键值没有匹配属性的会用NULL表示"><a href="#1-3-OUTER-JOIN（FULL-OUTER-JOIN、FULL-JOIN）：返回两表所有元素，键值没有匹配属性的会用NULL表示" class="headerlink" title="1.3 OUTER JOIN（FULL OUTER JOIN、FULL JOIN）：返回两表所有元素，键值没有匹配属性的会用NULL表示"></a>1.3 OUTER JOIN（FULL OUTER JOIN、FULL JOIN）：返回两表所有元素，键值没有匹配属性的会用NULL表示</h3><p><img src="https://cdn.jsdelivr.net/gh/MerickBao/picEmbedding/img/20220325221115.png" srcset="/img/loading.gif" lazyload alt="20210406141256"></p>
-<div class="code-wrapper"><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">&lt;</span>select_list<span class="token operator">></span>
-<span class="token keyword">FROM</span> Table_A a
-<span class="token keyword">FULL</span> <span class="token keyword">OUTER</span> <span class="token keyword">JOIN</span> Table_b b
-<span class="token keyword">ON</span> a<span class="token punctuation">.</span><span class="token keyword">key</span> <span class="token operator">=</span> b<span class="token punctuation">.</span><span class="token keyword">key</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></div>
-<h2 id="2-UNION"><a href="#2-UNION" class="headerlink" title="2.UNION"></a>2.UNION</h2><p>合并两个或者多个SELECT语句的结果，合并的结果需要有相同的结构。默认会去重，使用<code>UNION ALL</code>可以保留重复的结果。</p>
-<h2 id="3-WIHT-AS"><a href="#3-WIHT-AS" class="headerlink" title="3.WIHT AS"></a>3.WIHT AS</h2><p>子查询，会将查询结果保存在一个临时表中，方便后续的查询。</p>
-<div class="code-wrapper"><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">WITE table_name <span class="token keyword">AS</span> <span class="token punctuation">(</span>
-	<span class="token keyword">SELECT</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></div>
-<h2 id="4-条件判断语句"><a href="#4-条件判断语句" class="headerlink" title="4.条件判断语句"></a>4.条件判断语句</h2><div class="code-wrapper"><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment"># 1.IF语句</span>
-<span class="token comment"># IF (conditions, if_true, if_false)</span>
-<span class="token keyword">IF</span> <span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">'china'</span><span class="token punctuation">,</span> <span class="token string">'Chinese'</span><span class="token punctuation">,</span> <span class="token string">'Others'</span><span class="token punctuation">)</span>
-
-<span class="token comment"># 2.CASE WHEN语句</span>
-<span class="token keyword">CASE</span> 列名
-	<span class="token keyword">WHEN</span> 条件<span class="token number">1</span> <span class="token keyword">THEN</span> 结果
-	<span class="token keyword">WHEN</span> 条件<span class="token number">2</span> <span class="token keyword">THEN</span> 结果
-	<span class="token keyword">ELSE</span> 其他条件下的结果
-	<span class="token keyword">END</span> （别名可选）
-	
-<span class="token comment"># 3.IFNULL(expr1, expr2): 当expr1为null时用expr2替换查找到的值</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
-<h2 id="5-时间相关"><a href="#5-时间相关" class="headerlink" title="5.时间相关"></a>5.时间相关</h2><h3 id="5-1-date-format-时间，”时间格式”"><a href="#5-1-date-format-时间，”时间格式”" class="headerlink" title="5.1 date_format(时间，”时间格式”)"></a>5.1 date_format(时间，”时间格式”)</h3><p>指定时间的格式</p>
-<div class="code-wrapper"><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">date_format<span class="token punctuation">(</span>date_<span class="token punctuation">,</span> <span class="token string">"%Y-%m"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div>
-<h2 id="6-窗口函数"><a href="#6-窗口函数" class="headerlink" title="6.窗口函数"></a>6.窗口函数</h2><h3 id="6-1-RANK"><a href="#6-1-RANK" class="headerlink" title="6.1 RANK()"></a>6.1 RANK()</h3><p>按照分组进行对查询结果进行排名</p>
-<div class="code-wrapper"><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">RANK<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">OVER</span><span class="token punctuation">(</span> <span class="token keyword">PARTITION</span> <span class="token keyword">BY</span> key1 <span class="token keyword">ORDER</span> <span class="token keyword">BY</span> key2<span class="token punctuation">,</span> key3 <span class="token keyword">DESC</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div>
             </div>
             <hr>
             <div>
@@ -330,7 +325,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/">软件开发</a>
                     
                   </div>
                 
@@ -338,11 +333,11 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+                      <a class="hover-with-bg" href="/tags/JWT/">JWT</a>
                     
-                      <a class="hover-with-bg" href="/tags/%E8%BF%9E%E6%8E%A5/">连接</a>
+                      <a class="hover-with-bg" href="/tags/%E7%94%A8%E6%88%B7%E8%AE%A4%E8%AF%81/">用户认证</a>
                     
-                      <a class="hover-with-bg" href="/tags/JOIN/">JOIN</a>
+                      <a class="hover-with-bg" href="/tags/%E5%8A%A0%E8%A7%A3%E5%AF%86/">加解密</a>
                     
                   </div>
                 
@@ -351,7 +346,7 @@
               
                 <p class="note note-warning">
 		  <strong>本文作者: </strong><a href="/">MerickBao</a> <br>
-		  <strong>本文链接: </strong><a href="https://merickbao.top/post/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B8%B8%E7%94%A8%E5%85%B3%E9%94%AE%E5%AD%97.html">https://merickbao.top/post/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B8%B8%E7%94%A8%E5%85%B3%E9%94%AE%E5%AD%97.html</a> <br>
+		  <strong>本文链接: </strong><a href="https://merickbao.top/post/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/JWT%E6%80%BB%E7%BB%93.html">https://merickbao.top/post/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/JWT%E6%80%BB%E7%BB%93.html</a> <br>
 		  <strong>版权声明: </strong>本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
                 </p>
               
@@ -361,18 +356,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/post/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA%E4%B8%8E%E6%90%9C%E7%B4%A2/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E7%AE%97%E6%B3%95.html">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">最短路径算法</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/post/%E7%AE%97%E6%B3%95/%E7%AB%9E%E8%B5%9B%E6%A8%A1%E7%89%88.html">
-                        <span class="hidden-mobile">竞赛模版</span>
+                      <a href="/post/%E7%AE%97%E6%B3%95/%E9%A2%98%E8%A7%A3/Leetcode214.%E6%9C%80%E7%9F%AD%E5%9B%9E%E6%96%87%E4%B8%B2.html">
+                        <span class="hidden-mobile">Leetcode214.最短回文串</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

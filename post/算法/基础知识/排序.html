@@ -222,7 +222,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      869 字
+      1.7k 字
     </span>
   
 
@@ -232,7 +232,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      13
+      25
        分钟
     </span>
   
@@ -274,13 +274,111 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2022年6月3日 下午
+                  本文最后更新于：2022年7月16日 晚上
                 
               </p>
             
             <div class="markdown-body">
               <p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/bk9ocA/">Shopee-002. Shoffee</a></p>
 <p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/">剑指 Offer 51. 数组中的逆序对</a></p>
+<h2 id="排序算法比较"><a href="#排序算法比较" class="headerlink" title="排序算法比较"></a>排序算法比较</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">算法</th>
+<th style="text-align:center">平均时间复杂度</th>
+<th style="text-align:center">最优时间复杂度</th>
+<th style="text-align:center">最坏时间复杂度</th>
+<th style="text-align:center">空间复杂度</th>
+<th style="text-align:center">稳定性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">冒泡排序</td>
+<td style="text-align:center">$O(n^2)$</td>
+<td style="text-align:center">$O(n)$</td>
+<td style="text-align:center">$O(n^2)$</td>
+<td style="text-align:center">$O(1)$</td>
+<td style="text-align:center">稳定</td>
+</tr>
+<tr>
+<td style="text-align:center">插入排序</td>
+<td style="text-align:center">$O(n^2)$</td>
+<td style="text-align:center">$O(n)$</td>
+<td style="text-align:center">$O(n^2)$</td>
+<td style="text-align:center">$O(1)$</td>
+<td style="text-align:center">稳定</td>
+</tr>
+<tr>
+<td style="text-align:center">归并排序</td>
+<td style="text-align:center">$O(nlogn)$</td>
+<td style="text-align:center">$O(nlogn)$</td>
+<td style="text-align:center">$O(nlogn)$</td>
+<td style="text-align:center">$O(n)$</td>
+<td style="text-align:center">稳定</td>
+</tr>
+<tr>
+<td style="text-align:center">计数排序</td>
+<td style="text-align:center">$O(n+k)$</td>
+<td style="text-align:center">$O(n+k)$</td>
+<td style="text-align:center">$O(n+k)$</td>
+<td style="text-align:center">$O(k)$</td>
+<td style="text-align:center">稳定</td>
+</tr>
+<tr>
+<td style="text-align:center">桶排序</td>
+<td style="text-align:center">$O(n+k)$</td>
+<td style="text-align:center">$O(n+k)$</td>
+<td style="text-align:center">$O(n^2)$</td>
+<td style="text-align:center">$O(n+k)$</td>
+<td style="text-align:center">稳定</td>
+</tr>
+<tr>
+<td style="text-align:center">基数排序</td>
+<td style="text-align:center">$O(n\times k)$</td>
+<td style="text-align:center">$O(n\times k)$</td>
+<td style="text-align:center">$O(n\times k)$</td>
+<td style="text-align:center">$O(n+k)$</td>
+<td style="text-align:center">稳定</td>
+</tr>
+<tr>
+<td style="text-align:center">希尔排序</td>
+<td style="text-align:center">$O(nlogn)$</td>
+<td style="text-align:center">$O(nlog^2n)$</td>
+<td style="text-align:center">$O(nlog^2n)$</td>
+<td style="text-align:center">$O(1)$</td>
+<td style="text-align:center">不稳定</td>
+</tr>
+<tr>
+<td style="text-align:center">选择排序</td>
+<td style="text-align:center">$O(n^2)$</td>
+<td style="text-align:center">$O(n^2)$</td>
+<td style="text-align:center">$O(n^2)$</td>
+<td style="text-align:center">$O(1)$</td>
+<td style="text-align:center">不稳定</td>
+</tr>
+<tr>
+<td style="text-align:center">快速排序</td>
+<td style="text-align:center">$O(nlogn)$</td>
+<td style="text-align:center">$O(nlogn)$</td>
+<td style="text-align:center">$O(n^2)$</td>
+<td style="text-align:center">$O(logn)$</td>
+<td style="text-align:center">不稳定</td>
+</tr>
+<tr>
+<td style="text-align:center">堆排序</td>
+<td style="text-align:center">$O(nlogn)$</td>
+<td style="text-align:center">$O(nlogn)$</td>
+<td style="text-align:center">$O(nlogn)$</td>
+<td style="text-align:center">$O(1)$</td>
+<td style="text-align:center">不稳定</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>空间复杂度：是指除了原数组外，需要开辟的额外空间的大小</p>
+<p>稳定性是指：排序前后<strong>两个相等的数的相对位置</strong>不变</p>
 <h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><p>思想：分而治之</p>
 <p>时间复杂度：$O(nlogn)$，最坏情况下：$O(n^{2})$</p>
 <p>空间复杂度：$O(logn)$，最坏情况下：$O(n)$</p>
@@ -339,7 +437,7 @@
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
 <h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><p>时间复杂度：$O(NlogN)$</p>
 <p>空间复杂度：$O(N)$，辅助数组空间</p>
-<div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> tmp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 辅助数组</span>
+<h3 id="写法一"><a href="#写法一" class="headerlink" title="写法一"></a>写法一</h3><div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> tmp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 辅助数组</span>
 
 <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">mergeSort</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> l<span class="token punctuation">,</span> <span class="token keyword">int</span> r<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
     <span class="token comment">// stop</span>
@@ -366,8 +464,14 @@
             <span class="token comment">// ans += mid - i + 1;</span>
         <span class="token punctuation">&#125;</span>
     <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
-<div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> tmp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 辅助数组</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;=</span> mid<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        nums<span class="token punctuation">[</span>idx<span class="token operator">++</span><span class="token punctuation">]</span> <span class="token operator">=</span> tmp<span class="token punctuation">[</span>i<span class="token operator">++</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>j <span class="token operator">&lt;=</span> r<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        nums<span class="token punctuation">[</span>idx<span class="token operator">++</span><span class="token punctuation">]</span> <span class="token operator">=</span> tmp<span class="token punctuation">[</span>j<span class="token operator">++</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<h3 id="写法二"><a href="#写法二" class="headerlink" title="写法二"></a>写法二</h3><div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> tmp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 辅助数组</span>
 
 <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">mergeSort</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> l<span class="token punctuation">,</span> <span class="token keyword">int</span> r<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
     <span class="token comment">// stop</span>
@@ -399,7 +503,82 @@
         <span class="token punctuation">&#125;</span>
     <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
-<h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2>
+<h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><h3 id="大顶堆"><a href="#大顶堆" class="headerlink" title="大顶堆"></a>大顶堆</h3><div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">void</span> <span class="token function">siftDown</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr<span class="token punctuation">,</span> <span class="token keyword">int</span> l<span class="token punctuation">,</span> <span class="token keyword">int</span> r<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// 计算父节点和子节点的下标</span>
+    <span class="token keyword">int</span> parent <span class="token operator">=</span> l<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> child <span class="token operator">=</span> parent <span class="token operator">*</span> <span class="token number">2</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>child <span class="token operator">&lt;=</span> r<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">// 在下标范围内做比较</span>
+        <span class="token comment">// 先比较两个子节点的大小，选择最大的</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>child <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">&lt;=</span> r <span class="token operator">&amp;&amp;</span> arr<span class="token punctuation">[</span>child<span class="token punctuation">]</span> <span class="token operator">&lt;</span> arr<span class="token punctuation">[</span>child <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            child<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+        <span class="token comment">// 如果父节点比最大的子节点大，代表调整完毕，直接跳出函数</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span>parent<span class="token punctuation">]</span> <span class="token operator">>=</span> arr<span class="token punctuation">[</span>child<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+            <span class="token comment">// 否则交换父子节点的值，子节点再和孙节点比较,直到交换完毕</span>
+            <span class="token keyword">int</span> t <span class="token operator">=</span> arr<span class="token punctuation">[</span>parent<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            arr<span class="token punctuation">[</span>parent<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>child<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            arr<span class="token punctuation">[</span>child<span class="token punctuation">]</span> <span class="token operator">=</span> t<span class="token punctuation">;</span>
+            parent <span class="token operator">=</span> child<span class="token punctuation">;</span>
+            child <span class="token operator">=</span> parent <span class="token operator">*</span> <span class="token number">2</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">void</span> <span class="token function">heapSort</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr<span class="token punctuation">,</span> <span class="token keyword">int</span> len<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// 从最后一个节点的父节点开始pushDown来初始化堆</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token punctuation">(</span>len <span class="token operator">-</span> <span class="token number">1</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token function">siftDown</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> i<span class="token punctuation">,</span> len <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token comment">// 先将第一个元素和已经排好的元素前一位做交换，再重新调整</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> len <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token comment">// 将堆顶元素和堆末尾元素交换</span>
+        <span class="token keyword">int</span> t <span class="token operator">=</span> arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> t<span class="token punctuation">;</span>
+        <span class="token comment">// 重新调整堆使其满足有序状态</span>
+        <span class="token function">siftDown</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<h3 id="小顶堆"><a href="#小顶堆" class="headerlink" title="小顶堆"></a>小顶堆</h3><div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">void</span> <span class="token function">siftDown</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr<span class="token punctuation">,</span> <span class="token keyword">int</span> l<span class="token punctuation">,</span> <span class="token keyword">int</span> r<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// 计算父节点和子节点的下标</span>
+    <span class="token keyword">int</span> parent <span class="token operator">=</span> l<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> child <span class="token operator">=</span> parent <span class="token operator">*</span> <span class="token number">2</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>child <span class="token operator">&lt;=</span> r<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">// 在下标范围内做比较</span>
+        <span class="token comment">// 先比较两个子节点的大小，选择最小的</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>child <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">&lt;=</span> r <span class="token operator">&amp;&amp;</span> arr<span class="token punctuation">[</span>child<span class="token punctuation">]</span> <span class="token operator">></span> arr<span class="token punctuation">[</span>child <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            child<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+        <span class="token comment">// 如果父节点比最小的子节点小，代表调整完毕，直接跳出函数</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span>parent<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> arr<span class="token punctuation">[</span>child<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+            <span class="token comment">// 否则交换父子节点的值，子节点再和孙节点比较,直到交换完毕</span>
+            <span class="token keyword">int</span> t <span class="token operator">=</span> arr<span class="token punctuation">[</span>parent<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            arr<span class="token punctuation">[</span>parent<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>child<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            arr<span class="token punctuation">[</span>child<span class="token punctuation">]</span> <span class="token operator">=</span> t<span class="token punctuation">;</span>
+            parent <span class="token operator">=</span> child<span class="token punctuation">;</span>
+            child <span class="token operator">=</span> parent <span class="token operator">*</span> <span class="token number">2</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">void</span> <span class="token function">heapSort</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr<span class="token punctuation">,</span> <span class="token keyword">int</span> len<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// 从最后一个节点的父节点开始pushDown来初始化堆</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token punctuation">(</span>len <span class="token operator">-</span> <span class="token number">1</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token function">siftDown</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> i<span class="token punctuation">,</span> len <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token comment">// 先将第一个元素和已经排好的元素前一位做交换，再重新调整</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> len <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token comment">// 将堆顶元素和堆末尾元素交换</span>
+        <span class="token keyword">int</span> t <span class="token operator">=</span> arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> t<span class="token punctuation">;</span>
+        <span class="token comment">// 重新调整堆使其满足有序状态</span>
+        <span class="token function">siftDown</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
             </div>
             <hr>
             <div>

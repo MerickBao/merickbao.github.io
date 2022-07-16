@@ -222,7 +222,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      509 字
+      780 字
     </span>
   
 
@@ -232,7 +232,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      8
+      12
        分钟
     </span>
   
@@ -274,7 +274,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2021年11月17日 晚上
+                  本文最后更新于：2022年7月16日 晚上
                 
               </p>
             
@@ -305,6 +305,69 @@
     <span class="token comment">// 后序</span>
     <span class="token comment">// System.out.println(root.val);</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">// 非递归先序</span>
+<span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span> root<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> ans <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">TreeNode</span> curr <span class="token operator">=</span> root<span class="token punctuation">;</span>
+    <span class="token class-name">Deque</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TreeNode</span><span class="token punctuation">></span></span> q <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LinkedList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>curr <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">||</span> <span class="token operator">!</span>q<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>curr <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            ans<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>curr<span class="token punctuation">.</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            q<span class="token punctuation">.</span><span class="token function">offerLast</span><span class="token punctuation">(</span>curr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            curr <span class="token operator">=</span> curr<span class="token punctuation">.</span>left<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+            <span class="token class-name">TreeNode</span> tmp <span class="token operator">=</span> q<span class="token punctuation">.</span><span class="token function">pollLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">//ans.add(tmp.val);</span>
+            curr <span class="token operator">=</span> tmp<span class="token punctuation">.</span>right<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+
+<span class="token comment">// 非递归中序遍历</span>
+<span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span> root<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> ans <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">TreeNode</span> curr <span class="token operator">=</span> root<span class="token punctuation">;</span>
+    <span class="token class-name">Deque</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TreeNode</span><span class="token punctuation">></span></span> q <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LinkedList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>curr <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">||</span> <span class="token operator">!</span>q<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>curr <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            q<span class="token punctuation">.</span><span class="token function">offerLast</span><span class="token punctuation">(</span>curr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            curr <span class="token operator">=</span> curr<span class="token punctuation">.</span>left<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+            <span class="token class-name">TreeNode</span> tmp <span class="token operator">=</span> q<span class="token punctuation">.</span><span class="token function">pollLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            ans<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>tmp<span class="token punctuation">.</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            curr <span class="token operator">=</span> tmp<span class="token punctuation">.</span>right<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<p>非递归实现树的后序遍历：</p>
+<div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span> root<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> ans <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">Deque</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TreeNode</span><span class="token punctuation">></span></span> q <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LinkedList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 分别记录当前节点和前一个节点</span>
+    <span class="token class-name">TreeNode</span> curr <span class="token operator">=</span> root<span class="token punctuation">,</span> prev <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>curr <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">||</span> <span class="token operator">!</span>q<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>curr <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            q<span class="token punctuation">.</span><span class="token function">offerLast</span><span class="token punctuation">(</span>curr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            curr <span class="token operator">=</span> curr<span class="token punctuation">.</span>left<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span> 
+        curr <span class="token operator">=</span> q<span class="token punctuation">.</span><span class="token function">peekLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 当前节点是叶子结点或者该节点的右子树被遍历完了</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>curr<span class="token punctuation">.</span>right <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">||</span> curr<span class="token punctuation">.</span>right <span class="token operator">==</span> prev<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            ans<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>curr<span class="token punctuation">.</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">// 当前节点出栈</span>
+            q<span class="token punctuation">.</span><span class="token function">pollLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            prev <span class="token operator">=</span> curr<span class="token punctuation">;</span>
+            curr <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+            <span class="token comment">// 遍历右子树</span>
+            curr <span class="token operator">=</span> curr<span class="token punctuation">.</span>right<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
 <h4 id="1-2-2-层序遍历-BFS"><a href="#1-2-2-层序遍历-BFS" class="headerlink" title="1.2.2 层序遍历(BFS)"></a>1.2.2 层序遍历(BFS)</h4><p>需要使用一个队列来作为辅助工具来遍历。</p>
 <div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">levelOrder</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span> root<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
     <span class="token class-name">Queue</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TreeNode</span><span class="token punctuation">></span></span> q <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LinkedList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -378,9 +441,9 @@
                     
                       <a class="hover-with-bg" href="/tags/%E9%82%BB%E6%8E%A5%E8%A1%A8/">邻接表</a>
                     
-                      <a class="hover-with-bg" href="/tags/BFS/">BFS</a>
-                    
                       <a class="hover-with-bg" href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
+                    
+                      <a class="hover-with-bg" href="/tags/BFS/">BFS</a>
                     
                   </div>
                 

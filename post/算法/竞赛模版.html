@@ -274,7 +274,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2022年3月1日 下午
+                  本文最后更新于：2022年7月16日 晚上
                 
               </p>
             
@@ -322,8 +322,7 @@
 			<span class="token keyword">return</span> <span class="token class-name">Double</span><span class="token punctuation">.</span><span class="token function">parseDouble</span><span class="token punctuation">(</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 		<span class="token punctuation">&#125;</span>
 	<span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
 <h2 id="2-shuffleSort-Fisher-Yates-洗牌算法"><a href="#2-shuffleSort-Fisher-Yates-洗牌算法" class="headerlink" title="2.shuffleSort(Fisher-Yates 洗牌算法)"></a>2.shuffleSort(Fisher-Yates 洗牌算法)</h2><div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">Random</span> random <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">shuffleSort</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> a<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
     <span class="token keyword">int</span> n <span class="token operator">=</span> a<span class="token punctuation">.</span>length<span class="token punctuation">;</span><span class="token comment">//shuffle, then sort </span>
@@ -339,335 +338,335 @@
 <span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>math<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
 
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">&#123;</span>
-        <span class="token class-name">InputStream</span> inputStream <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">;</span>
-        <span class="token class-name">OutputStream</span> outputStream <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">;</span>
-        <span class="token class-name">InputReader</span> in <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">InputReader</span><span class="token punctuation">(</span>inputStream<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token class-name">OutputWriter</span> out <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">OutputWriter</span><span class="token punctuation">(</span>outputStream<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment">// code here</span>
-        <span class="token class-name">Task</span> solver <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">A</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        solver<span class="token punctuation">.</span><span class="token function">solve</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> in<span class="token punctuation">,</span> out<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        out<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">&#123;</span>
+		<span class="token class-name">InputStream</span> inputStream <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">;</span>
+		<span class="token class-name">OutputStream</span> outputStream <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">;</span>
+		<span class="token class-name">InputReader</span> in <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">InputReader</span><span class="token punctuation">(</span>inputStream<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">OutputWriter</span> out <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">OutputWriter</span><span class="token punctuation">(</span>outputStream<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token comment">// code here</span>
+		<span class="token class-name">Task</span> solver <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">A</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		solver<span class="token punctuation">.</span><span class="token function">solve</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> in<span class="token punctuation">,</span> out<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		out<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span>
 
-<span class="token keyword">class</span> <span class="token class-name">A</span> <span class="token keyword">implements</span> <span class="token class-name">Task</span><span class="token punctuation">&#123;</span>
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">solve</span><span class="token punctuation">(</span><span class="token keyword">int</span> testNumber<span class="token punctuation">,</span> <span class="token class-name">InputReader</span> in<span class="token punctuation">,</span> <span class="token class-name">OutputWriter</span> out<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">int</span> t <span class="token operator">=</span> in<span class="token punctuation">.</span><span class="token function">readInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span>t<span class="token operator">--</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+<span class="token keyword">class</span> <span class="token class-name">A</span> <span class="token keyword">implements</span> <span class="token class-name">Task</span> <span class="token punctuation">&#123;</span>
+	<span class="token annotation punctuation">@Override</span>
+	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">solve</span><span class="token punctuation">(</span><span class="token keyword">int</span> testNumber<span class="token punctuation">,</span> <span class="token class-name">InputReader</span> in<span class="token punctuation">,</span> <span class="token class-name">OutputWriter</span> out<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">int</span> t <span class="token operator">=</span> in<span class="token punctuation">.</span><span class="token function">readInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">while</span> <span class="token punctuation">(</span>t<span class="token operator">--</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
 
-        <span class="token punctuation">&#125;</span>
-    <span class="token punctuation">&#125;</span>
+		<span class="token punctuation">&#125;</span>
+	<span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span>
 
-<span class="token keyword">interface</span> <span class="token class-name">Task</span><span class="token punctuation">&#123;</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">solve</span><span class="token punctuation">(</span><span class="token keyword">int</span> testNumber<span class="token punctuation">,</span> <span class="token class-name">InputReader</span> in<span class="token punctuation">,</span> <span class="token class-name">OutputWriter</span> out<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">interface</span> <span class="token class-name">Task</span> <span class="token punctuation">&#123;</span>
+	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">solve</span><span class="token punctuation">(</span><span class="token keyword">int</span> testNumber<span class="token punctuation">,</span> <span class="token class-name">InputReader</span> in<span class="token punctuation">,</span> <span class="token class-name">OutputWriter</span> out<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
 
 <span class="token keyword">class</span> <span class="token class-name">InputReader</span> <span class="token punctuation">&#123;</span>
 
-    <span class="token keyword">private</span> <span class="token class-name">InputStream</span> stream<span class="token punctuation">;</span>
-    <span class="token keyword">private</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> buf <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token number">1024</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token keyword">private</span> <span class="token keyword">int</span> curChar<span class="token punctuation">;</span>
-    <span class="token keyword">private</span> <span class="token keyword">int</span> numChars<span class="token punctuation">;</span>
-    <span class="token keyword">private</span> <span class="token class-name">InputReader<span class="token punctuation">.</span>SpaceCharFilter</span> filter<span class="token punctuation">;</span>
+	<span class="token keyword">private</span> <span class="token class-name">InputStream</span> stream<span class="token punctuation">;</span>
+	<span class="token keyword">private</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> buf <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token number">1024</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	<span class="token keyword">private</span> <span class="token keyword">int</span> curChar<span class="token punctuation">;</span>
+	<span class="token keyword">private</span> <span class="token keyword">int</span> numChars<span class="token punctuation">;</span>
+	<span class="token keyword">private</span> <span class="token class-name">InputReader<span class="token punctuation">.</span>SpaceCharFilter</span> filter<span class="token punctuation">;</span>
 
-    <span class="token keyword">public</span> <span class="token class-name">InputReader</span><span class="token punctuation">(</span><span class="token class-name">InputStream</span> stream<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>stream <span class="token operator">=</span> stream<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token class-name">InputReader</span><span class="token punctuation">(</span><span class="token class-name">InputStream</span> stream<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span>stream <span class="token operator">=</span> stream<span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>numChars <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
-            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">InputMismatchException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>curChar <span class="token operator">>=</span> numChars<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-            curChar <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-            <span class="token keyword">try</span> <span class="token punctuation">&#123;</span>
-                numChars <span class="token operator">=</span> stream<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>buf<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-                <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">InputMismatchException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">&#125;</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>numChars <span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">)</span>
-                <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
-        <span class="token keyword">return</span> buf<span class="token punctuation">[</span>curChar<span class="token operator">++</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>numChars <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+			<span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">InputMismatchException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>curChar <span class="token operator">>=</span> numChars<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+			curChar <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+			<span class="token keyword">try</span> <span class="token punctuation">&#123;</span>
+				numChars <span class="token operator">=</span> stream<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>buf<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+				<span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">InputMismatchException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">&#125;</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>numChars <span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+				<span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+		<span class="token punctuation">&#125;</span>
+		<span class="token keyword">return</span> buf<span class="token punctuation">[</span>curChar<span class="token operator">++</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>numChars <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
-            <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>curChar <span class="token operator">>=</span> numChars<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-            curChar <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-            <span class="token keyword">try</span> <span class="token punctuation">&#123;</span>
-                numChars <span class="token operator">=</span> stream<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>buf<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-                <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-            <span class="token punctuation">&#125;</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>numChars <span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">)</span>
-                <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
-        <span class="token keyword">return</span> buf<span class="token punctuation">[</span>curChar<span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>numChars <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+			<span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>curChar <span class="token operator">>=</span> numChars<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+			curChar <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+			<span class="token keyword">try</span> <span class="token punctuation">&#123;</span>
+				numChars <span class="token operator">=</span> stream<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>buf<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+				<span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+			<span class="token punctuation">&#125;</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>numChars <span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+				<span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+		<span class="token punctuation">&#125;</span>
+		<span class="token keyword">return</span> buf<span class="token punctuation">[</span>curChar<span class="token punctuation">]</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">readInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token function">isSpaceChar</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span>
-            c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">int</span> sgn <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">==</span> <span class="token string">'-'</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-            sgn <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-            c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
-        <span class="token keyword">int</span> res <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">do</span> <span class="token punctuation">&#123;</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">&lt;</span> <span class="token string">'0'</span> <span class="token operator">||</span> c <span class="token operator">></span> <span class="token string">'9'</span><span class="token punctuation">)</span>
-                <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">InputMismatchException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            res <span class="token operator">*=</span> <span class="token number">10</span><span class="token punctuation">;</span>
-            res <span class="token operator">+=</span> c <span class="token operator">-</span> <span class="token string">'0'</span><span class="token punctuation">;</span>
-            c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span> <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isSpaceChar</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> res <span class="token operator">*</span> sgn<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">readInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token function">isSpaceChar</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span>
+			c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">int</span> sgn <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">==</span> <span class="token string">'-'</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+			sgn <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+			c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">&#125;</span>
+		<span class="token keyword">int</span> res <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+		<span class="token keyword">do</span> <span class="token punctuation">&#123;</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">&lt;</span> <span class="token string">'0'</span> <span class="token operator">||</span> c <span class="token operator">></span> <span class="token string">'9'</span><span class="token punctuation">)</span>
+				<span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">InputMismatchException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			res <span class="token operator">*=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+			res <span class="token operator">+=</span> c <span class="token operator">-</span> <span class="token string">'0'</span><span class="token punctuation">;</span>
+			c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">&#125;</span> <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isSpaceChar</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">return</span> res <span class="token operator">*</span> sgn<span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">long</span> <span class="token function">readLong</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token function">isSpaceChar</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span>
-            c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">int</span> sgn <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">==</span> <span class="token string">'-'</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-            sgn <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-            c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
-        <span class="token keyword">long</span> res <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">do</span> <span class="token punctuation">&#123;</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">&lt;</span> <span class="token string">'0'</span> <span class="token operator">||</span> c <span class="token operator">></span> <span class="token string">'9'</span><span class="token punctuation">)</span>
-                <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">InputMismatchException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            res <span class="token operator">*=</span> <span class="token number">10</span><span class="token punctuation">;</span>
-            res <span class="token operator">+=</span> c <span class="token operator">-</span> <span class="token string">'0'</span><span class="token punctuation">;</span>
-            c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span> <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isSpaceChar</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> res <span class="token operator">*</span> sgn<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">long</span> <span class="token function">readLong</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token function">isSpaceChar</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span>
+			c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">int</span> sgn <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">==</span> <span class="token string">'-'</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+			sgn <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+			c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">&#125;</span>
+		<span class="token keyword">long</span> res <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+		<span class="token keyword">do</span> <span class="token punctuation">&#123;</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">&lt;</span> <span class="token string">'0'</span> <span class="token operator">||</span> c <span class="token operator">></span> <span class="token string">'9'</span><span class="token punctuation">)</span>
+				<span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">InputMismatchException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			res <span class="token operator">*=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+			res <span class="token operator">+=</span> c <span class="token operator">-</span> <span class="token string">'0'</span><span class="token punctuation">;</span>
+			c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">&#125;</span> <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isSpaceChar</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">return</span> res <span class="token operator">*</span> sgn<span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">readString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token function">isSpaceChar</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span>
-            c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token class-name">StringBuilder</span> res <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">do</span> <span class="token punctuation">&#123;</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Character</span><span class="token punctuation">.</span><span class="token function">isValidCodePoint</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span>
-                res<span class="token punctuation">.</span><span class="token function">appendCodePoint</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span> <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isSpaceChar</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">readString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token function">isSpaceChar</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span>
+			c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">StringBuilder</span> res <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">do</span> <span class="token punctuation">&#123;</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Character</span><span class="token punctuation">.</span><span class="token function">isValidCodePoint</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span>
+				res<span class="token punctuation">.</span><span class="token function">appendCodePoint</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">&#125;</span> <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isSpaceChar</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isSpaceChar</span><span class="token punctuation">(</span><span class="token keyword">int</span> c<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>filter <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
-            <span class="token keyword">return</span> filter<span class="token punctuation">.</span><span class="token function">isSpaceChar</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> <span class="token function">isWhitespace</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isSpaceChar</span><span class="token punctuation">(</span><span class="token keyword">int</span> c<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>filter <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+			<span class="token keyword">return</span> filter<span class="token punctuation">.</span><span class="token function">isSpaceChar</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">return</span> <span class="token function">isWhitespace</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">isWhitespace</span><span class="token punctuation">(</span><span class="token keyword">int</span> c<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">return</span> c <span class="token operator">==</span> <span class="token string">' '</span> <span class="token operator">||</span> c <span class="token operator">==</span> <span class="token string">'\n'</span> <span class="token operator">||</span> c <span class="token operator">==</span> <span class="token string">'\r'</span> <span class="token operator">||</span> c <span class="token operator">==</span> <span class="token string">'\t'</span> <span class="token operator">||</span> c <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">isWhitespace</span><span class="token punctuation">(</span><span class="token keyword">int</span> c<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">return</span> c <span class="token operator">==</span> <span class="token string">' '</span> <span class="token operator">||</span> c <span class="token operator">==</span> <span class="token string">'\n'</span> <span class="token operator">||</span> c <span class="token operator">==</span> <span class="token string">'\r'</span> <span class="token operator">||</span> c <span class="token operator">==</span> <span class="token string">'\t'</span> <span class="token operator">||</span> c <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">private</span> <span class="token class-name">String</span> <span class="token function">readLine0</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token class-name">StringBuilder</span> buf <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span>c <span class="token operator">!=</span> <span class="token string">'\n'</span> <span class="token operator">&amp;&amp;</span> c <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">!=</span> <span class="token string">'\r'</span><span class="token punctuation">)</span>
-                buf<span class="token punctuation">.</span><span class="token function">appendCodePoint</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
-        <span class="token keyword">return</span> buf<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">private</span> <span class="token class-name">String</span> <span class="token function">readLine0</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token class-name">StringBuilder</span> buf <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">while</span> <span class="token punctuation">(</span>c <span class="token operator">!=</span> <span class="token string">'\n'</span> <span class="token operator">&amp;&amp;</span> c <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">!=</span> <span class="token string">'\r'</span><span class="token punctuation">)</span>
+				buf<span class="token punctuation">.</span><span class="token function">appendCodePoint</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">&#125;</span>
+		<span class="token keyword">return</span> buf<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">readLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token class-name">String</span> s <span class="token operator">=</span> <span class="token function">readLine0</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
-            s <span class="token operator">=</span> <span class="token function">readLine0</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> s<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">readLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token class-name">String</span> s <span class="token operator">=</span> <span class="token function">readLine0</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">while</span> <span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+			s <span class="token operator">=</span> <span class="token function">readLine0</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">return</span> s<span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">readLine</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> ignoreEmptyLines<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>ignoreEmptyLines<span class="token punctuation">)</span>
-            <span class="token keyword">return</span> <span class="token function">readLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">else</span>
-            <span class="token keyword">return</span> <span class="token function">readLine0</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">readLine</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> ignoreEmptyLines<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>ignoreEmptyLines<span class="token punctuation">)</span>
+			<span class="token keyword">return</span> <span class="token function">readLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">else</span>
+			<span class="token keyword">return</span> <span class="token function">readLine0</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token class-name">BigInteger</span> <span class="token function">readBigInteger</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">try</span> <span class="token punctuation">&#123;</span>
-            <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">BigInteger</span><span class="token punctuation">(</span><span class="token function">readString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">NumberFormatException</span> e<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">InputMismatchException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token class-name">BigInteger</span> <span class="token function">readBigInteger</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">try</span> <span class="token punctuation">&#123;</span>
+			<span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">BigInteger</span><span class="token punctuation">(</span><span class="token function">readString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">NumberFormatException</span> e<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+			<span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">InputMismatchException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">&#125;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">char</span> <span class="token function">readCharacter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token function">isSpaceChar</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span>
-            c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">)</span> c<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">char</span> <span class="token function">readCharacter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token function">isSpaceChar</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span>
+			c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">)</span> c<span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">double</span> <span class="token function">readDouble</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token function">isSpaceChar</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span>
-            c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">int</span> sgn <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">==</span> <span class="token string">'-'</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-            sgn <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-            c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
-        <span class="token keyword">double</span> res <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isSpaceChar</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> c <span class="token operator">!=</span> <span class="token string">'.'</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">==</span> <span class="token string">'e'</span> <span class="token operator">||</span> c <span class="token operator">==</span> <span class="token string">'E'</span><span class="token punctuation">)</span>
-                <span class="token keyword">return</span> res <span class="token operator">*</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token function">readInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">&lt;</span> <span class="token string">'0'</span> <span class="token operator">||</span> c <span class="token operator">></span> <span class="token string">'9'</span><span class="token punctuation">)</span>
-                <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">InputMismatchException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            res <span class="token operator">*=</span> <span class="token number">10</span><span class="token punctuation">;</span>
-            res <span class="token operator">+=</span> c <span class="token operator">-</span> <span class="token string">'0'</span><span class="token punctuation">;</span>
-            c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">==</span> <span class="token string">'.'</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-            c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">double</span> m <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-            <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isSpaceChar</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-                <span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">==</span> <span class="token string">'e'</span> <span class="token operator">||</span> c <span class="token operator">==</span> <span class="token string">'E'</span><span class="token punctuation">)</span>
-                    <span class="token keyword">return</span> res <span class="token operator">*</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token function">readInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">&lt;</span> <span class="token string">'0'</span> <span class="token operator">||</span> c <span class="token operator">></span> <span class="token string">'9'</span><span class="token punctuation">)</span>
-                    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">InputMismatchException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                m <span class="token operator">/=</span> <span class="token number">10</span><span class="token punctuation">;</span>
-                res <span class="token operator">+=</span> <span class="token punctuation">(</span>c <span class="token operator">-</span> <span class="token string">'0'</span><span class="token punctuation">)</span> <span class="token operator">*</span> m<span class="token punctuation">;</span>
-                c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">&#125;</span>
-        <span class="token punctuation">&#125;</span>
-        <span class="token keyword">return</span> res <span class="token operator">*</span> sgn<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">double</span> <span class="token function">readDouble</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token function">isSpaceChar</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span>
+			c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">int</span> sgn <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">==</span> <span class="token string">'-'</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+			sgn <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+			c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">&#125;</span>
+		<span class="token keyword">double</span> res <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+		<span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isSpaceChar</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> c <span class="token operator">!=</span> <span class="token string">'.'</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">==</span> <span class="token string">'e'</span> <span class="token operator">||</span> c <span class="token operator">==</span> <span class="token string">'E'</span><span class="token punctuation">)</span>
+				<span class="token keyword">return</span> res <span class="token operator">*</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token function">readInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">&lt;</span> <span class="token string">'0'</span> <span class="token operator">||</span> c <span class="token operator">></span> <span class="token string">'9'</span><span class="token punctuation">)</span>
+				<span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">InputMismatchException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			res <span class="token operator">*=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+			res <span class="token operator">+=</span> c <span class="token operator">-</span> <span class="token string">'0'</span><span class="token punctuation">;</span>
+			c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">&#125;</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">==</span> <span class="token string">'.'</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+			c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword">double</span> m <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+			<span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isSpaceChar</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+				<span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">==</span> <span class="token string">'e'</span> <span class="token operator">||</span> c <span class="token operator">==</span> <span class="token string">'E'</span><span class="token punctuation">)</span>
+					<span class="token keyword">return</span> res <span class="token operator">*</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token function">readInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">&lt;</span> <span class="token string">'0'</span> <span class="token operator">||</span> c <span class="token operator">></span> <span class="token string">'9'</span><span class="token punctuation">)</span>
+					<span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">InputMismatchException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				m <span class="token operator">/=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+				res <span class="token operator">+=</span> <span class="token punctuation">(</span>c <span class="token operator">-</span> <span class="token string">'0'</span><span class="token punctuation">)</span> <span class="token operator">*</span> m<span class="token punctuation">;</span>
+				c <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">&#125;</span>
+		<span class="token punctuation">&#125;</span>
+		<span class="token keyword">return</span> res <span class="token operator">*</span> sgn<span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isExhausted</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">int</span> value<span class="token punctuation">;</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token function">isSpaceChar</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> value <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
-            <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> value <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isExhausted</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">int</span> value<span class="token punctuation">;</span>
+		<span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token function">isSpaceChar</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> value <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+			<span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">return</span> value <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">return</span> <span class="token function">readString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">return</span> <span class="token function">readString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token class-name">InputReader<span class="token punctuation">.</span>SpaceCharFilter</span> <span class="token function">getFilter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">return</span> filter<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token class-name">InputReader<span class="token punctuation">.</span>SpaceCharFilter</span> <span class="token function">getFilter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">return</span> filter<span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setFilter</span><span class="token punctuation">(</span><span class="token class-name">InputReader<span class="token punctuation">.</span>SpaceCharFilter</span> filter<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>filter <span class="token operator">=</span> filter<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setFilter</span><span class="token punctuation">(</span><span class="token class-name">InputReader<span class="token punctuation">.</span>SpaceCharFilter</span> filter<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span>filter <span class="token operator">=</span> filter<span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">SpaceCharFilter</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isSpaceChar</span><span class="token punctuation">(</span><span class="token keyword">int</span> ch<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">SpaceCharFilter</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isSpaceChar</span><span class="token punctuation">(</span><span class="token keyword">int</span> ch<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span>
 
 <span class="token keyword">class</span> <span class="token class-name">OutputWriter</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">private</span> <span class="token keyword">final</span> <span class="token class-name">PrintWriter</span> writer<span class="token punctuation">;</span>
+	<span class="token keyword">private</span> <span class="token keyword">final</span> <span class="token class-name">PrintWriter</span> writer<span class="token punctuation">;</span>
 
-    <span class="token keyword">public</span> <span class="token class-name">OutputWriter</span><span class="token punctuation">(</span><span class="token class-name">OutputStream</span> outputStream<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        writer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PrintWriter</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">BufferedWriter</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">OutputStreamWriter</span><span class="token punctuation">(</span>outputStream<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token class-name">OutputWriter</span><span class="token punctuation">(</span><span class="token class-name">OutputStream</span> outputStream<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		writer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PrintWriter</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">BufferedWriter</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">OutputStreamWriter</span><span class="token punctuation">(</span>outputStream<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token class-name">OutputWriter</span><span class="token punctuation">(</span><span class="token class-name">Writer</span> writer<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>writer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PrintWriter</span><span class="token punctuation">(</span>writer<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token class-name">OutputWriter</span><span class="token punctuation">(</span><span class="token class-name">Writer</span> writer<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span>writer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PrintWriter</span><span class="token punctuation">(</span>writer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> array<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        writer<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> array<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		writer<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token class-name">Object</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>objects<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> objects<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span>
-                writer<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            writer<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>objects<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token class-name">Object</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> objects<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> objects<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+				writer<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			writer<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>objects<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">&#125;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> array<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> array<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span>
-                writer<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            writer<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> array<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> array<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+				writer<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			writer<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">&#125;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token keyword">long</span><span class="token punctuation">[</span><span class="token punctuation">]</span> array<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> array<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span>
-                writer<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            writer<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token keyword">long</span><span class="token punctuation">[</span><span class="token punctuation">]</span> array<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> array<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+				writer<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			writer<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">&#125;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">printLine</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> array<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token function">print</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        writer<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">printLine</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> array<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token function">print</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		writer<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">printLine</span><span class="token punctuation">(</span><span class="token keyword">long</span><span class="token punctuation">[</span><span class="token punctuation">]</span> array<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token function">print</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        writer<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">printLine</span><span class="token punctuation">(</span><span class="token keyword">long</span><span class="token punctuation">[</span><span class="token punctuation">]</span> array<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token function">print</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		writer<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">printLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        writer<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">printLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		writer<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">printLine</span><span class="token punctuation">(</span><span class="token class-name">Object</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>objects<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token function">print</span><span class="token punctuation">(</span>objects<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        writer<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">printLine</span><span class="token punctuation">(</span><span class="token class-name">Object</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> objects<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token function">print</span><span class="token punctuation">(</span>objects<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		writer<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token keyword">char</span> i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        writer<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token keyword">char</span> i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		writer<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">printLine</span><span class="token punctuation">(</span><span class="token keyword">char</span> i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        writer<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">printLine</span><span class="token punctuation">(</span><span class="token keyword">char</span> i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		writer<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">printLine</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> array<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        writer<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">printLine</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> array<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		writer<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">printFormat</span><span class="token punctuation">(</span><span class="token class-name">String</span> format<span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>objects<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        writer<span class="token punctuation">.</span><span class="token function">printf</span><span class="token punctuation">(</span>format<span class="token punctuation">,</span> objects<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">printFormat</span><span class="token punctuation">(</span><span class="token class-name">String</span> format<span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> objects<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		writer<span class="token punctuation">.</span><span class="token function">printf</span><span class="token punctuation">(</span>format<span class="token punctuation">,</span> objects<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        writer<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		writer<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">flush</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        writer<span class="token punctuation">.</span><span class="token function">flush</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">flush</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		writer<span class="token punctuation">.</span><span class="token function">flush</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token keyword">long</span> i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        writer<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token keyword">long</span> i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		writer<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">printLine</span><span class="token punctuation">(</span><span class="token keyword">long</span> i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        writer<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">printLine</span><span class="token punctuation">(</span><span class="token keyword">long</span> i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		writer<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        writer<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		writer<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">printLine</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        writer<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">printLine</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		writer<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
             </div>
             <hr>
@@ -687,9 +686,9 @@
                     
                       <a class="hover-with-bg" href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
                     
-                      <a class="hover-with-bg" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
-                    
                       <a class="hover-with-bg" href="/tags/%E6%A8%A1%E7%89%88/">模版</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
                     
                   </div>
                 
