@@ -1,0 +1,1398 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/bg/favicon.png">
+  <link rel="icon" href="/img/bg/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="MerickBaoの博客 ｜ 分享使我们更加强大">
+  <meta name="author" content="MerickBao">
+  <meta name="keywords" content="">
+  
+  <title>秋招面试题汇总 - MerickBaoの博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      
+        
+          
+        
+        <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.min.css" />
+      
+      
+        <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.min.css" />
+      
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"merickbao.top","root":"/","version":"1.8.10","typing":{"enable":true,"typeSpeed":70,"cursorChar":"❀","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>MerickBaoの博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/movies/">
+                <i class="iconfont icon-douban-fill"></i>
+                douban
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/bg/bg_37.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="秋招面试题汇总">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      MerickBao
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2024-02-12 21:08" pubdate>
+        2024年2月12日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      9.2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      102
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">秋招面试题汇总</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2024年2月12日 晚上
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h1 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h1><h2 id="HTTP头部包含的信息？Cookie保存在哪？cookie和session的区别？"><a href="#HTTP头部包含的信息？Cookie保存在哪？cookie和session的区别？" class="headerlink" title="HTTP头部包含的信息？Cookie保存在哪？cookie和session的区别？"></a>HTTP头部包含的信息？Cookie保存在哪？cookie和session的区别？</h2><h3 id="1-HTTP-Request的header信息"><a href="#1-HTTP-Request的header信息" class="headerlink" title="1.HTTP Request的header信息"></a>1.HTTP Request的header信息</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">请求方法</td>
+<td style="text-align:center">主要有：GET、POST、PUT、DELETE</td>
+<td style="text-align:center">GET /student/2 HTTP/1.1</td>
+</tr>
+<tr>
+<td style="text-align:center">HOST</td>
+<td style="text-align:center">请求的web服务器的的域名地址</td>
+<td style="text-align:center"><a href="https://merickbao.top:8080">https://merickbao.top:8080</a></td>
+</tr>
+<tr>
+<td style="text-align:center">Connection</td>
+<td style="text-align:center">表示是否需要持久连接</td>
+<td style="text-align:center">Connection: keep-alive</td>
+</tr>
+<tr>
+<td style="text-align:center">Keep-Alive</td>
+<td style="text-align:center">显示此HTTP连接的Keep-Alive时间</td>
+<td style="text-align:center">Keep-Alive: 300</td>
+</tr>
+<tr>
+<td style="text-align:center">cookie</td>
+<td style="text-align:center">HTTP请求发送时，会把保存在该请求域名下的所有cookie值一起发送给web服务器</td>
+<td style="text-align:center">cookie：csrftoken=4GERM7xvF2JJwjLv5c1if24Eb3INjDvQyYusjbaVqui6TW71rjndwApLJ73dULKX; _ym_uid=164782706831064302; _ym_d=1647827068; sessionid=l37d7wwr8lzu80zcdra2c76p7olxwzgg; _ga=GA1.1.492789418.1647827063; _ym_isad=1; _ga_T7R9K035KL=GS1.1.1661349541.139.1.1661349586.0.0.0</td>
+</tr>
+<tr>
+<td style="text-align:center">User-Agent</td>
+<td style="text-align:center">客户端运行的浏览器的详细信息</td>
+<td style="text-align:center">Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Safari/537.36</td>
+</tr>
+<tr>
+<td style="text-align:center">Accept</td>
+<td style="text-align:center">指定客户端能够接收的内容类型</td>
+<td style="text-align:center">Accept:text/xml,application/xml,application/xhtml+xml,text/html;q=0.8,image/png,<em>/</em>;q=0.5</td>
+</tr>
+<tr>
+<td style="text-align:center">Accept-Language</td>
+<td style="text-align:center">指定HTTP客户端浏览器用来展示返回信息所优先选择的语言</td>
+<td style="text-align:center">Accept-Language: zh-cn,zh;q=0.5 这里默认为中文</td>
+</tr>
+<tr>
+<td style="text-align:center">Accept-Encoding</td>
+<td style="text-align:center">指定客户端浏览器可以支持的web服务器返回内容压缩编码类型</td>
+<td style="text-align:center">Accept-Encoding: gzip,deflate</td>
+</tr>
+<tr>
+<td style="text-align:center">Accept-Charset</td>
+<td style="text-align:center">浏览器可以接受的字符编码集</td>
+<td style="text-align:center">Accept-Charset: gb2312,utf-8;q=0.7,*;q=0.7</td>
+</tr>
+<tr>
+<td style="text-align:center">Content-Type</td>
+<td style="text-align:center">显示此HTTP请求提交的内容类型。一般只有post提交时才需要设置该属性</td>
+<td style="text-align:center">Content-type: application/x-www-form-urlencoded;charset:UTF-8</td>
+</tr>
+<tr>
+<td style="text-align:center">Referer</td>
+<td style="text-align:center">包含一个URL，用户从该URL代表的页面出发访问当前请求的页面</td>
+<td style="text-align:center"><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV17a411N7nP?spm_id_from=333.1007.tianma.1-1-1.click&amp;vd_source=b2ff65acf0fdb4e009be1b833f2cddc5">https://www.bilibili.com/video/BV17a411N7nP?spm_id_from=333.1007.tianma.1-1-1.click&amp;vd_source=b2ff65acf0fdb4e009be1b833f2cddc5</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="2-HTTP-Response的Headers"><a href="#2-HTTP-Response的Headers" class="headerlink" title="2.HTTP Response的Headers"></a>2.HTTP Response的Headers</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">content-language</td>
+<td style="text-align:center">响应体的语言类型</td>
+<td style="text-align:center">content-language: en</td>
+</tr>
+<tr>
+<td style="text-align:center">Content-Length</td>
+<td style="text-align:center">表示web服务器返回消息正文的长度</td>
+<td style="text-align:center">content-length: 285391</td>
+</tr>
+<tr>
+<td style="text-align:center">Content-Type</td>
+<td style="text-align:center">返回数据的类型（例如text/html文本类型）和字符编码格式</td>
+<td style="text-align:center">Content-Type: text/html;charset=utf-8</td>
+</tr>
+<tr>
+<td style="text-align:center">Date</td>
+<td style="text-align:center">显示当前的时间</td>
+<td style="text-align:center">date: Thu, 25 Aug 2022 09:13:29 GMT</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="3-cookie保存在哪？"><a href="#3-cookie保存在哪？" class="headerlink" title="3.cookie保存在哪？"></a>3.cookie保存在哪？</h3><p>cookie一般保存在浏览器本地的sqlite数据库中（Cookies文件），浏览器在发送请求时，会将保存在该域名下的所有cookie值一起封装在header中发送给web服务器。</p>
+<h3 id="4-cookie和session的区别？"><a href="#4-cookie和session的区别？" class="headerlink" title="4.cookie和session的区别？"></a>4.cookie和session的区别？</h3><ul>
+<li>相同点：都可以用来唯一标识客户端，解决HTTP的「无状态」</li>
+<li>不同点：<ul>
+<li>1.作用范围不同：cookie保存在客户端（安全性较差），session保存在服务器端（安全性高）</li>
+<li>2.有效期不同：cookie可以设置长时间有效，而session一般失效时间较短，客户端关闭或者session超时都会失效（默认失效时间为30分钟）。</li>
+<li>3.存储大小不同：单个cookie保存的数据不能超过4KB，而session能存储的数据量远大于cookie（最高可达2GB，但是存储越多，对服务器性能影响越大）。</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-HTTP状态码"><a href="#5-HTTP状态码" class="headerlink" title="5.HTTP状态码"></a>5.HTTP状态码</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">描述</th>
+<th style="text-align:center">常用状态码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1xx</td>
+<td style="text-align:center">表示请求已被正常接受，还需要继续处理</td>
+<td style="text-align:center">100（一切正常，可以继续请求）<br/>101（请切换协议）</td>
+</tr>
+<tr>
+<td style="text-align:center">2xx</td>
+<td style="text-align:center">表示请求已被成功接收、理解、处理</td>
+<td style="text-align:center">200（请求成功）<br/>204（请求已成功处理，但无返回内容）</td>
+</tr>
+<tr>
+<td style="text-align:center">3xx</td>
+<td style="text-align:center">重定向</td>
+<td style="text-align:center">301（表示资源已被永久重定向）<br/>302（临时重定向）<br/>304（资源未变化，可以直接使用本地缓存）</td>
+</tr>
+<tr>
+<td style="text-align:center">4xx</td>
+<td style="text-align:center">客户端错误</td>
+<td style="text-align:center">400（请求的语法错误）<br/>403（服务器理解请求，但拒绝执行）<br/>404（请求的资源在服务器未找到）</td>
+</tr>
+<tr>
+<td style="text-align:center">5xx</td>
+<td style="text-align:center">服务端错误</td>
+<td style="text-align:center">500（表示服务端程序错误）</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="怎么实现分布式session？"><a href="#怎么实现分布式session？" class="headerlink" title="怎么实现分布式session？"></a>怎么实现分布式session？</h2><ul>
+<li><p>方案1: 客户端存储</p>
+<p>将session信息保存在cookie中。</p>
+<p>缺点：存在安全隐患，cookie能保存的数据量有限。</p>
+</li>
+<li><p>方案2: session复制</p>
+<p>所有服务器都复制维护一份相同的seesion，在同一个局域网内，一台服务器的session会广播给其他服务器。</p>
+<p>缺点：每个服务器都会复制session，会造成服务器内存浪费</p>
+</li>
+<li><p>方案3: session黏性</p>
+<p>使用「Nginx」进行反向代理，使用「ip_hash」的负载策略，将客户端的请求根据ip固定的分配到一个服务器，这样便可以将客户端和服务器绑定。</p>
+<p>缺点：如果某一台服务器宕机，那么他所服务的客户端seesion将会丢失</p>
+<p><img src="https://cdn.jsdelivr.net/gh/MerickBao/picEmbedding/img/20220826105619.png" srcset="/img/loading.gif" lazyload alt="image-20220826105617022"></p>
+</li>
+<li><p>方案4: session集中管理（企业中常用的方案）</p>
+<p>使用「redis」等高性能服务器来集中管理seesion，例如spring官方提供的「spring-session」就是这样来处理session的一致性问题的。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/MerickBao/picEmbedding/img/20220826110129.png" srcset="/img/loading.gif" lazyload alt="image-20220826110127760"></p>
+</li>
+</ul>
+<h2 id="I-O多路复用？select、poll、epoll的区别？"><a href="#I-O多路复用？select、poll、epoll的区别？" class="headerlink" title="I/O多路复用？select、poll、epoll的区别？"></a>I/O多路复用？select、poll、epoll的区别？</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">操作</th>
+<th style="text-align:center">select</th>
+<th style="text-align:center">poll</th>
+<th style="text-align:center">epoll</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">操作方式</td>
+<td style="text-align:center">遍历（轮询）</td>
+<td style="text-align:center">遍历（轮询）</td>
+<td style="text-align:center">回调</td>
+</tr>
+<tr>
+<td style="text-align:center">数据结构</td>
+<td style="text-align:center">bitmap（长度为1024）</td>
+<td style="text-align:center">链表</td>
+<td style="text-align:center">红黑树+双向链表</td>
+</tr>
+<tr>
+<td style="text-align:center">最大连接数</td>
+<td style="text-align:center">1024（x86) / 2048(x64)</td>
+<td style="text-align:center">无限制</td>
+<td style="text-align:center">无限制</td>
+</tr>
+<tr>
+<td style="text-align:center">最大支持的fd数量</td>
+<td style="text-align:center">1024</td>
+<td style="text-align:center">65535</td>
+<td style="text-align:center">65535</td>
+</tr>
+<tr>
+<td style="text-align:center">fd拷贝</td>
+<td style="text-align:center">每次调用select，都要把fd集合从用户态拷贝到内核态</td>
+<td style="text-align:center">每次调用poll，都要把fd集合从用户态拷贝到内核态</td>
+<td style="text-align:center">fd首次调用epoll_ctl拷贝，每次调用epoll_wait不拷贝（共享内存）</td>
+</tr>
+<tr>
+<td style="text-align:center">工作模式</td>
+<td style="text-align:center">LT</td>
+<td style="text-align:center">LT</td>
+<td style="text-align:center">LT / ET（高速模式，非阻塞）</td>
+</tr>
+<tr>
+<td style="text-align:center">工作效率</td>
+<td style="text-align:center">$O(n)$</td>
+<td style="text-align:center">$O(n)$</td>
+<td style="text-align:center">$O(1)$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="I-O多路复用"><a href="#I-O多路复用" class="headerlink" title="I/O多路复用"></a>I/O多路复用</h3><ul>
+<li>IO多路复用属于同步IO模型，实现一个线程可以监听多个文件句柄（fd）</li>
+<li>一旦某个文件句柄就绪，就能够通知应用程序进行相应的读写操作（读写过程是阻塞的）</li>
+<li>没有文件句柄就绪就会阻塞应用程序，交出CPU</li>
+<li>多路是指网络连接，复用是指同一个线程</li>
+</ul>
+<h3 id="I-O多路复用的三种实现方式"><a href="#I-O多路复用的三种实现方式" class="headerlink" title="I/O多路复用的三种实现方式"></a>I/O多路复用的三种实现方式</h3><h4 id="select和poll"><a href="#select和poll" class="headerlink" title="select和poll"></a>select和poll</h4><p>select和poll属于无差别轮询。</p>
+<ul>
+<li>select：当有IO事件发生时，$O(n)$的进行轮询，找出能够读出数据或者写入数据的流</li>
+<li>单个进程能打开的「fd」是有限的，默认值为1024</li>
+<li>每次调用select，都需要把fd集合从用户态拷贝到内核态，复制开销很大</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/MerickBao/picEmbedding/img/20220829153210.png" srcset="/img/loading.gif" lazyload alt="image-20220829153209549"></p>
+<ul>
+<li>poll：poll和select本质上没有区别，都是将用户传入的数组拷贝到内核空间，然后查询每个fd对应的设备状态，<strong>唯一区别</strong>再与poll没有最大连接数限制，因为它是基于链表来存储。</li>
+<li>poll和select对「socket」的扫描是线性的，采用轮询的方式，高并发时效率较低</li>
+</ul>
+<h4 id="epoll"><a href="#epoll" class="headerlink" title="epoll"></a>epoll</h4><p>epoll可以理解为「event poll」，epoll是基于<strong>事件驱动（每个事件关联fd）</strong>的，只有当IO事件发生时，epoll才会将该事件通知我们，可以将时间复杂度降低到$O(1)$。</p>
+<p>所有添加到epoll中的事件都会与设备(网卡)驱动程序建立回调关系，也就是说，当相应的事件发生时会调用这个回调方法。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/MerickBao/picEmbedding/img/20220829180154.png" srcset="/img/loading.gif" lazyload alt="image-20220829173545738"></p>
+<ul>
+<li>没有最大并发连接限制</li>
+<li>效率高，不会随着fd的数目增加而减少效率，只关心“活跃”的连接，只有活跃的fd才会调用callback函数。</li>
+<li>使用「mmap()」来进行内存拷贝，减少复制开销。</li>
+<li>缺点：只能在「linux」下工作。</li>
+<li>在并发不高的情况下，多线程+阻塞I/O的方式性能可能更好。</li>
+</ul>
+<h2 id="TCP怎么保证传输的可靠性？"><a href="#TCP怎么保证传输的可靠性？" class="headerlink" title="TCP怎么保证传输的可靠性？"></a>TCP怎么保证传输的可靠性？</h2><h3 id="保证可靠传输的手段"><a href="#保证可靠传输的手段" class="headerlink" title="保证可靠传输的手段"></a>保证可靠传输的手段</h3><ul>
+<li>1.将数据分割为多个数据包</li>
+<li>2.发送方给每一个数据包都进行编号，接收放按照序号对数据包进行排序、重组</li>
+<li>3.<strong>校验和</strong>：使用16位的校验和字段，保存TCP首部和数据的校验和。可以防止在传输过程中数据包被篡改，接受方如果计算出的校验和和数据包中的不同，则不会确认收到该报文而直接丢弃。</li>
+<li>4.接收方会丢弃重复的数据</li>
+<li>5.<strong>流量控制</strong>：TCP使用可变大小的滑动窗口协议来实现流量控制，接收方只允许发送方发送接收方接收窗口大小的数据量，接收方会通过确认报文里边的<strong>窗口字段</strong>来控制发送窗口的大小，以防止丢包。</li>
+<li>6.<strong>拥塞控制</strong>：当网络用塞时，将减少数据的发送。发送方维护一个<strong>拥塞窗口</strong>，拥塞窗口的大小取决于网络的拥塞程度，动态变化。发送方的发送窗口大小取拥塞窗口和接收窗口的较小值。</li>
+<li>7.<strong>ARQ协议</strong>：自动重传请求协议，发送方没发送完一个分组就停止发送，等收到接收方的确认后再发送下一个分组。停止等待ARQ协议、连续ARQ协议。</li>
+<li>8.<strong>超时重传</strong>：当 发送方 发出一个段后，它启动一个定时器，等待接收方端确认收到这个报文段。如果不能及时收到一个确认，将重发这个报文段。</li>
+</ul>
+<h2 id="TCP拥塞控制？"><a href="#TCP拥塞控制？" class="headerlink" title="TCP拥塞控制？"></a>TCP拥塞控制？</h2><p>TCP的拥塞控制采用了四种算法，即<strong>慢开始</strong>、<strong>拥塞避免</strong>、<strong>快重传</strong>和<strong>快恢复</strong>。</p>
+<ul>
+<li>慢开始：发送方刚开始发送数据时，拥塞窗口设置为1，每经过一个RTT，就把拥塞窗口加倍。</li>
+<li>拥塞避免：让拥塞窗口缓慢增大，每经过一个RTT就把发送的拥塞窗口加1</li>
+<li>快重传：用来快速恢复丢失的数据包。接收方每收到一个失序的报文段就立即发出重复确认，当发送方连续收到三个重复确认就直接重传接收方未收到的报文段，而不必等待为其设置的重传计时器。</li>
+<li>快恢复：当发送方连续收到三个重复确认时，就把慢开始门限减半，然后继续执行拥塞避免策略。</li>
+</ul>
+<h2 id="数据到达网卡后，怎么样传输到内存"><a href="#数据到达网卡后，怎么样传输到内存" class="headerlink" title="数据到达网卡后，怎么样传输到内存?"></a>数据到达网卡后，怎么样传输到内存?</h2><ul>
+<li>1.数据包从外界网络进入到物理网卡</li>
+<li>2.网卡将数据包通过<strong>DMA</strong>的方式写入到指定的<strong>内存区域</strong>（该区域由网卡驱动分配注册）</li>
+<li>3.网卡通过硬件中断（IRQ）告知CPU有数据来了</li>
+<li>4.CPU根据中断表，调用已经注册的中断函数，这个中断函数会调用驱动函数中相应的函数来处理数据</li>
+<li>5.驱动先暂时禁用网卡中断，表明已经知道内存中有数据了，下次网卡收到数据包直接写到内存就可以了，不用再通知CPU，以提高效率。</li>
+<li>6.启动软中断来进行耗时的具体的IO操作。由于硬中断无法被打断，如果把具体IO部分交给硬中断来处理，会导致CPU被长时间占用，而无法响应其他中断。</li>
+<li>7.服务端在监听的端口接受到TCP报文，然后会对HTTP请求进行解析，并按照HTTP报文格式封装成HTTP Request对象，共上层使用。</li>
+</ul>
+<h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h1><h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><h2 id="数据库索引类型？like什么时候走索引？"><a href="#数据库索引类型？like什么时候走索引？" class="headerlink" title="数据库索引类型？like什么时候走索引？"></a>数据库索引类型？like什么时候走索引？</h2><h3 id="新建索引语法"><a href="#新建索引语法" class="headerlink" title="新建索引语法"></a>新建索引语法</h3><div class="code-wrapper"><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment"># 添加索引</span>
+<span class="token comment"># 1.直接添加</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">INDEX</span> indexName <span class="token keyword">ON</span> table_name<span class="token punctuation">(</span>column_name<span class="token punctuation">)</span>
+<span class="token comment"># 2.通过修改标结构添加</span>
+<span class="token keyword">ALTER</span> <span class="token keyword">table</span> table_name <span class="token keyword">ADD</span> <span class="token keyword">INDEX</span> indexName<span class="token punctuation">(</span>columnName<span class="token punctuation">)</span>
+<span class="token comment"># 3.创建表结构时直接添加</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> mytable<span class="token punctuation">(</span>  
+    ID <span class="token keyword">INT</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>   
+    username <span class="token keyword">VARCHAR</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>  
+    <span class="token keyword">INDEX</span> <span class="token punctuation">[</span>indexName<span class="token punctuation">]</span> <span class="token punctuation">(</span>username<span class="token punctuation">(</span>length<span class="token punctuation">)</span><span class="token punctuation">)</span>  
+<span class="token punctuation">)</span><span class="token punctuation">;</span>  
+
+<span class="token comment"># 删除索引</span>
+<span class="token keyword">DROP</span> <span class="token keyword">INDEX</span> <span class="token punctuation">[</span>indexName<span class="token punctuation">]</span> <span class="token keyword">ON</span> mytable<span class="token punctuation">;</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<h3 id="按数据结构分类"><a href="#按数据结构分类" class="headerlink" title="按数据结构分类"></a>按数据结构分类</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">索引类型</th>
+<th style="text-align:center">特点</th>
+<th style="text-align:center">数据库</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">B+树索引</td>
+<td style="text-align:center">使用广泛，适合范围查找和顺序查找，千万级的数据量，树高为3～5</td>
+<td style="text-align:center">InnoDB、MyISAM、Memory</td>
+</tr>
+<tr>
+<td style="text-align:center">Hash索引</td>
+<td style="text-align:center">只支持等值查询，哈希索引只保存哈希值和指针</td>
+<td style="text-align:center">Momery</td>
+</tr>
+<tr>
+<td style="text-align:center">Full-text索引</td>
+<td style="text-align:center">适用于文本很长的时候，且需要快速检索的情况</td>
+<td style="text-align:center">InnoDB、MyISAM</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="按物理存储分类"><a href="#按物理存储分类" class="headerlink" title="按物理存储分类"></a>按物理存储分类</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">索引类型</th>
+<th style="text-align:center">特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">聚簇索引</td>
+<td style="text-align:center">聚簇索引的叶子节点存储了一行完整的表数据（B+树索引）</td>
+</tr>
+<tr>
+<td style="text-align:center">二级索引（辅助索引）</td>
+<td style="text-align:center">聚簇索引以外的其他索引，叶子节点不存储完整的表数据，可能需要一次回表查询</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="按字段特征分类"><a href="#按字段特征分类" class="headerlink" title="按字段特征分类"></a>按字段特征分类</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">索引类型</th>
+<th style="text-align:center">特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">主键索引</td>
+<td style="text-align:center">建立在主键上的索引被称为<strong>主键索引</strong>，一张数据表只能有一个主键索引，索引列值不允许有空值，通常在创建表时一起创建</td>
+</tr>
+<tr>
+<td style="text-align:center">唯一索引</td>
+<td style="text-align:center">建立在UNIQUE字段上的索引被称为<strong>唯一索引</strong>，一张表可以有多个唯一索引，索引列值允许为空，列值中出现多个空值不会发生重复冲突</td>
+</tr>
+<tr>
+<td style="text-align:center">普通索引</td>
+<td style="text-align:center">建立在普通字段上的索引被称为<strong>普通索引</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">前缀索引</td>
+<td style="text-align:center"><strong>前缀索引</strong>是指对字符类型字段的前几个字符或对二进制类型字段的前几个bytes建立的索引，而不是在整个字段上建索引。前缀索引可以建立在类型为char、varchar、binary、varbinary的列上，可以大大减少索引占用的存储空间，也能提升索引的查询效率。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="按索引字段个数分类"><a href="#按索引字段个数分类" class="headerlink" title="按索引字段个数分类"></a>按索引字段个数分类</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">索引类型</th>
+<th style="text-align:center">特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">单列索引</td>
+<td style="text-align:center">建立在单个列上的索引被称为单列索引</td>
+</tr>
+<tr>
+<td style="text-align:center">联合索引</td>
+<td style="text-align:center">建立在单个列上的索引被称为单列索引</td>
+</tr>
+<tr>
+<td style="text-align:center">覆盖索引</td>
+<td style="text-align:center">该索引包含「查询中」用到的所有字段</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="索引最左优先匹配原则？"><a href="#索引最左优先匹配原则？" class="headerlink" title="索引最左优先匹配原则？"></a>索引最左优先匹配原则？</h3><p>在MySQL建立联合索引时会遵守最左前缀匹配原则，即最左优先，在检索数据时从联合索引的最左边开始匹配。</p>
+<p>最左优先，以最左边的为起点任何连续的索引都能匹配上。同时遇到范围查询(&gt;、&lt;、between、like)就会停止匹配。<br>例如：如果建立(a,b)顺序的索引，我们的条件只有b=xxx，是匹配不到(a,b)索引的；但是如果查询条件是a = 1 and b = 2或者b=2 and a=1就可以，因为优化器会自动调整a,b的顺序，并不需要严格按照索引的顺序来；再比如a = 1 and b = 2 and c &gt; 3 and d = 4 如果建立(a,b,c,d)顺序的索引，d是用不到索引的，因为c字段是一个范围查询，它之后的字段会停止匹配。如果建立(a,b,d,c)的索引则都可以用到，a,b,d的顺序可以任意调整。</p>
+<h3 id="like语句会使用索引吗？什么时候会使用索引？什么时候不会？"><a href="#like语句会使用索引吗？什么时候会使用索引？什么时候不会？" class="headerlink" title="like语句会使用索引吗？什么时候会使用索引？什么时候不会？"></a>like语句会使用索引吗？什么时候会使用索引？什么时候不会？</h3><p>一般情况下，百分号加在关键词后面会走索引，例如<code>like &quot;prefix%&quot;</code>，而百分号加在前面是不走索引的，例如<code>like &quot;%prefix&quot;</code>。但是当查询为覆盖索引的时候，like无论如何都会使用索引，因为Mysql会优先走覆盖索引。</p>
+<h3 id="like如果走了索引，或者范围查询后面的字段还走不走索引？"><a href="#like如果走了索引，或者范围查询后面的字段还走不走索引？" class="headerlink" title="like如果走了索引，或者范围查询后面的字段还走不走索引？"></a>like如果走了索引，或者范围查询后面的字段还走不走索引？</h3><p>假设abc加了索引，select a from table where a like “张三%” and b = 18，那b走不走索引？不一定，根据索引的底层原理，<strong>a字段是确定值，b字段才会走索引</strong>。所以范围查询后面不走索引只是一个偷懒的说法。如果范围查询过后的a是个确定值，那后面还是走索引的，否则不走。</p>
+<h3 id="索引失效的情况"><a href="#索引失效的情况" class="headerlink" title="索引失效的情况"></a>索引失效的情况</h3><ul>
+<li>1.联合索引不满足最左匹配原则</li>
+<li>2.隐式类型转换导致索引失效</li>
+<li>3.使用<code>select *</code></li>
+<li>4.索引列参与运算</li>
+<li>5.错误的<code>like</code>使用</li>
+</ul>
+<h2 id="MySQL事务"><a href="#MySQL事务" class="headerlink" title="MySQL事务"></a>MySQL事务</h2><p>简单来说，事务就是一组增删改操作，这一组操作要么都执行成功，要么都不执行。</p>
+<h3 id="事务的特点"><a href="#事务的特点" class="headerlink" title="事务的特点"></a>事务的特点</h3><ul>
+<li>Atomicity：原子性，事务是不可以被分割的，事务的原子性要求动作要么全部完成，要么一个动作都不完成。</li>
+<li>Consistency：一致性，事务执行前后，系统中的数据要保持一致。</li>
+<li>Isolation：隔离性，事务在并发执行过程中，各个事务之前不能互相影响，各事务是独立的。</li>
+<li>Durability：持久性，事务执行完毕后，其对数据库的修改是持久的，即使数据库发生故障修改也不应该丢失。</li>
+</ul>
+<p>事务的原子性、隔离性、持久性都是为一致性服务的，最终结果就是要保证数据一致性</p>
+<h3 id="事务的隔离级别"><a href="#事务的隔离级别" class="headerlink" title="事务的隔离级别"></a>事务的隔离级别</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">事务隔离级别</th>
+<th style="text-align:center">脏读</th>
+<th style="text-align:center">不可重复度</th>
+<th style="text-align:center">幻读</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">读未提交（read-uncommitted）</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✓</td>
+</tr>
+<tr>
+<td style="text-align:center">读已提交（read-committed）</td>
+<td style="text-align:center">✕</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✓</td>
+</tr>
+<tr>
+<td style="text-align:center">可重复度（repeatable-read）</td>
+<td style="text-align:center">✕</td>
+<td style="text-align:center">✕</td>
+<td style="text-align:center">✓</td>
+</tr>
+<tr>
+<td style="text-align:center">可串行化（serialiable）</td>
+<td style="text-align:center">✕</td>
+<td style="text-align:center">✕</td>
+<td style="text-align:center">✕</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="MySQL日志"><a href="#MySQL日志" class="headerlink" title="MySQL日志"></a>MySQL日志</h3><h4 id="1-redo-log"><a href="#1-redo-log" class="headerlink" title="1.redo log"></a>1.redo log</h4><p>InnoDB独有的日志，是InnoDB支持崩溃恢复的手段。</p>
+<p>redo log记录了对「数据页」的修改，属于物理日志。对数据页的操作会先记录到「redo log buffer」里边，buffer中的数据会定时或者在「事务提交」时进行刷盘，将buffer中的内容写入到redo log文件中。</p>
+<p>redo log采用循环写模式保存log（多个文件，以环形数组的形式进行读写，读指针和写指针），原因是之前恢复的数据再保存在redo log中就没有意义了，而且这样也可以更加轻量的记录对数据的相关操作。</p>
+<h4 id="2-bin-log：二进制日志｜归档日志"><a href="#2-bin-log：二进制日志｜归档日志" class="headerlink" title="2.bin log：二进制日志｜归档日志"></a>2.bin log：二进制日志｜归档日志</h4><p>bin log是MySQL的server层实现的，所有引擎都可以使用，记录的是语句的原始逻辑（例如：给id=2的这一行的c字段加1），属于逻辑日志，bin log会按照顺序记录所有涉及更新数据的逻辑操作。</p>
+<p>采用追加写模式保存log，所有的修改记录都会按顺序保存在bin log中。</p>
+<p>每一个事务都对应一个「bin log cache」，记录首先写在cache里边，等事务提交时再进行刷盘，将cache中的数据写入到「page cache」，最后再「fsync」到磁盘。</p>
+<h4 id="3-undo-log：回滚日志"><a href="#3-undo-log：回滚日志" class="headerlink" title="3.undo log：回滚日志"></a>3.undo log：回滚日志</h4><p>记录事务所进行的所有修改，只要事务没有执行成功，就会使用undo log进行回滚。</p>
+<p>undo log记录的是逻辑日志，即每一步修改干了啥。</p>
+<p>回滚优先于数据持久化到磁盘上。</p>
+<h3 id="两阶段提交"><a href="#两阶段提交" class="headerlink" title="两阶段提交"></a>两阶段提交</h3><p>由于redo log和bin log的刷盘（写入）时机不一样，所以可能会导致数据不一致的情况发生，这时候就需要采用两阶段提交来保证数据一致性。</p>
+<p>方案：将redo log的写入分为两个阶段，即「prepare」和「commit」阶段。在事务中，只有在bin log写入后，redo log才会进行commit。</p>
+<p>redo log和bin log都可以表示事务的提交状态，两阶段提交的作用就是让两种log在逻辑上保持一致。</p>
+<p><strong>两阶段提交实现崩溃恢复</strong>：在写入redo log和bin log时，都会记录当前事务id。</p>
+<ul>
+<li>1.如果在写入redo log之前崩溃，此时redo log和bin log中都没有记录，是一致的，奔溃也没事。</li>
+<li>2.如果在redo log prepare阶段之后奔溃，恢复时，由于redo log没有被标记为commit，所以redo log中记录的事务id在bin log中无法找到，执行回滚操作。</li>
+<li><p>3.如果在写入bin log之后，redo log commit之前崩溃，恢复时，redo log根据事务id找到对应的bin log，这时直接进行commit即可。</p>
+</li>
+<li><p>总的来说，奔溃恢复时，只要redo log不是出于commit阶段，就拿redo log中的事务id去bin log中查找，找的到就提交，否则回滚。</p>
+</li>
+</ul>
+<h3 id="MVCC"><a href="#MVCC" class="headerlink" title="MVCC"></a>MVCC</h3><p>MVCC，即多版本并发控制。MVCC的实现，是通过保存数据在某个时间点的快照来实现的。根据事务的开始的时间不同，每个事物对同一张表，同一个时刻看到的数据可能是不同的。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/MerickBao/picEmbedding/img/20220920231545.png" srcset="/img/loading.gif" lazyload alt="image-20220920231544752"></p>
+<p>MVCC原理：每一行数据都有一个隐藏的回滚指针，用于指向该行修改前的最后一个<strong>历史版本</strong>，这个历史版本存放在undo log中。如果需要执行更新操作，会将原记录放入undo log中，并通过隐藏的<strong>回滚指针</strong>指向undo log中的原记录，其他事务需要查询此条记录时，便会查询undo log中这行记录的最后一个历史版本。</p>
+<p>优点：最大的优点就是读不加锁，读写不冲突，极大的增加了MySQL的并发性。通过MVCC保证了事务的隔离性。</p>
+<h2 id="Redis核心数据结构"><a href="#Redis核心数据结构" class="headerlink" title="Redis核心数据结构"></a>Redis核心数据结构</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">基本命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Strings</td>
+<td style="text-align:center">redis最基本的数据类型。<br/>可以保存字节的序列，例如文本、序列化的对象、二进制数组等  <br>字符串默认最大大小限制为512M</td>
+<td style="text-align:center">SET: 存储一个string value<br>SETNX: 只有当key不存在时才存储value，可以用来实现锁<br>GET: 获取key对应的value<br>MGET：一次性获取多个key-value</td>
+</tr>
+<tr>
+<td style="text-align:center">Lists</td>
+<td style="text-align:center">是一个string value组成的一个链表。经常被用来实现栈和队列。<br/>最大长度限制为$2^{32}-1$个元素</td>
+<td style="text-align:center">LPUSH：从头部添加元素到链表<br>RPUSH: 从尾部添加元素<br>LPOP：从左边移除元素<br/>RPOP：从右边移除元素<br/>LLEN：获取链表长度<br/>LMOVE：原子的将一个元素从一个列表移动到另一个列表</td>
+</tr>
+<tr>
+<td style="text-align:center">Sets</td>
+<td style="text-align:center">sets是一个没有重复元素的无须集合。<br/>可以用来去重，求交集、并集和差集。</td>
+<td style="text-align:center">SADD：往集合添加元素<br/>SREM：移除指定的元素<br/>SISMEMBER：检查一个元素是否在集合中<br/>SINTER：求多个sets的交集<br/>SCARD：获取集合的大小</td>
+</tr>
+<tr>
+<td style="text-align:center">Hashes</td>
+<td style="text-align:center">用来在key下面存储一个哈希表。<br/>例如user当key，可以在user下，再存储user的name、age等和对应的值</td>
+<td style="text-align:center">HSET：为hash字段添加一个或多个key-value<br/>HGET：获取对应字段的值<br/>HMGET：返回多个字段对应的值<br/>HINCRBY：将对应字段的值增加指定的值</td>
+</tr>
+<tr>
+<td style="text-align:center">Sorted sets</td>
+<td style="text-align:center">有序集合，当分数相等时，将按照名称的字典序排序。<br/>可以用来实现排行榜和限流。</td>
+<td style="text-align:center">ZADD：添加一条记录，如果key已经存在，将更新key的分数<br/>ZRANGE：返回排名在指定范围的元素<br/>ZRANK：获取指定元素的排名<br/>ZREVRANK：获取指定元素的逆序排名</td>
+</tr>
+<tr>
+<td style="text-align:center">Geospatial</td>
+<td style="text-align:center">用来存储地理位置：经、纬度<br/>可以方便的找离的最近的位置、<br/>半径范围内或者边界框内的坐标</td>
+<td style="text-align:center">GETADD：添加一条记录（经度在纬度之前）<br/>GEOSEARCH：获取给定半径或者边界框范围内的坐标</td>
+</tr>
+<tr>
+<td style="text-align:center">HyperLogLog</td>
+<td style="text-align:center">是一种概率数据结构，可以用来估计集合中的数据量。<br/>仅使用12KB的空间就能提供0.81%的标准差。</td>
+<td style="text-align:center">PFADD：添加一个元素<br/>PFCOUNT：返回集合中的元素个数的估计值<br/>PFMERGE：合并多个HyperLogLog</td>
+</tr>
+<tr>
+<td style="text-align:center">Bitmaps</td>
+<td style="text-align:center">是string类型的拓展，将string视为一个bit向量，并且可以进行位运算。<br/></td>
+<td style="text-align:center">SETBIT：将某一位置为指定的值（0 or 1）<br/>GETBIT：获取指定位置的bit值<br/>BITCOUNT：获取1的个数</td>
+</tr>
+<tr>
+<td style="text-align:center">Streams</td>
+<td style="text-align:center">A Redis stream is a data structure that acts like an append-only log. <br>You can use streams to record and simultaneously syndicate events in real time.</td>
+<td style="text-align:center">可以用来实现消息队列</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="Redis高可用方案"><a href="#Redis高可用方案" class="headerlink" title="Redis高可用方案"></a>Redis高可用方案</h2><ul>
+<li>1.<strong>数据持久化</strong>：AOF和RDB</li>
+<li>2.<strong>主从复制</strong>：读写分离，主节点进行写操作，从节点服务读操作</li>
+<li>3.<strong>哨兵模式</strong>：解决主从模式需要手动处理节点挂掉的场景，使用哨兵以一秒一次的频率来向redis节点发送ping命令，如果节点的回复时间超过最大阈值，就认为这个节点挂掉了。如果挂掉的是主节点，这时将会按照预定的策略来重新选择一个主节点，并自动进行切换。</li>
+<li>4.<strong>redis集群</strong>：拥有前面几个的所有特点，还提供了多个主从节点的集群功能，实现了真正意义上的分布式集群服务</li>
+</ul>
+<h2 id="Redis为什么使用单线程？为什么快？"><a href="#Redis为什么使用单线程？为什么快？" class="headerlink" title="Redis为什么使用单线程？为什么快？"></a>Redis为什么使用单线程？为什么快？</h2><h3 id="1-Redis使用单线程的原因"><a href="#1-Redis使用单线程的原因" class="headerlink" title="1.Redis使用单线程的原因"></a>1.Redis使用单线程的原因</h3><p>因为Redis是基于内存的操作，CPU不是Redis的瓶颈，Redis的瓶颈最有可能是机器内存的大小或者网络带宽。既然单线程容易实现，而且CPU不会成为瓶颈，那就顺理成章地采用单线程的方案了。</p>
+<ul>
+<li>避免了并发环境下各种锁的性能消耗</li>
+<li>可以使用“单线程、多进程”的集群方案来充分利用多核CPU</li>
+<li>采用单线程，避免了不必要的上下文切换和竞争CPU的消耗</li>
+</ul>
+<h3 id="2-Redis快的原因"><a href="#2-Redis快的原因" class="headerlink" title="2.Redis快的原因"></a>2.Redis快的原因</h3><ul>
+<li>最根本原因是redis是基于内存的，先天性就决定了快</li>
+<li>使用单线程，省去了上下文切换线程的时间</li>
+<li>使用了IO多路复用技术，可以处理并发连接</li>
+<li>使用了一些特殊的数据结构对数据存储进行了优化（跳表、压缩表）</li>
+</ul>
+<h1 id="Java八股"><a href="#Java八股" class="headerlink" title="Java八股"></a>Java八股</h1><h2 id="JDK和JRE的区别？"><a href="#JDK和JRE的区别？" class="headerlink" title="JDK和JRE的区别？"></a>JDK和JRE的区别？</h2><p><strong>JRE(Java Runtime Enviroment)</strong> 是 Java 的运行环境，仅仅是一个运行Java程序所必须的环境集合，包含JVM标准实现及Java核心类库。</p>
+<p><strong>JDK(Java Development Kit) </strong>是Java开发工具包，提供了Java的开发环境和运行环境</p>
+<h2 id="GC过程"><a href="#GC过程" class="headerlink" title="GC过程"></a>GC过程</h2><p><img src="https://cdn.jsdelivr.net/gh/MerickBao/picEmbedding/img/20220919094050.png" srcset="/img/loading.gif" lazyload alt="image-20220919094048821"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/MerickBao/picEmbedding/img/20220919091045.png" srcset="/img/loading.gif" lazyload alt="image-20220919091044353"></p>
+<h3 id="对象存活判断"><a href="#对象存活判断" class="headerlink" title="对象存活判断"></a>对象存活判断</h3><ul>
+<li>引用计数法：存在对象循环引用问题</li>
+<li>可达性分析算法：GC root：虚拟机栈中引用的对象、本地方法栈中引用的对象、方法区中类静态属性引用的对象、方法区中常量引用的对象、被同步锁持有的对象</li>
+</ul>
+<h3 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h3><ul>
+<li>强引用：宁可OOM，也不会被回收</li>
+<li>软引用：只有内存不足时才会回收</li>
+<li>弱引用：对象生命周期短，只要发现便会被回收</li>
+<li>虚引用：任何时候都可能会被回收</li>
+</ul>
+<h3 id="GC算法"><a href="#GC算法" class="headerlink" title="GC算法"></a>GC算法</h3><ul>
+<li>新生代GC：标记-复制算法</li>
+<li>老年代GC：标记-清除、标记-整理</li>
+</ul>
+<h2 id="类加载过程"><a href="#类加载过程" class="headerlink" title="类加载过程"></a>类加载过程</h2><p><img src="https://cdn.jsdelivr.net/gh/MerickBao/picEmbedding/img/20220919095427.png" srcset="/img/loading.gif" lazyload alt="image-20220919095426518"></p>
+<h2 id="双亲委派机制"><a href="#双亲委派机制" class="headerlink" title="双亲委派机制"></a>双亲委派机制</h2><p><img src="https://cdn.jsdelivr.net/gh/MerickBao/picEmbedding/img/20220919102744.png" srcset="/img/loading.gif" lazyload alt="classloader_WPS图片"></p>
+<p>双亲委派模型保证了 Java 程序的稳定运行，可以避免类的重复加载（JVM 区分不同类的方式不仅仅根据类名，相同的类文件被不同的类加载器加载产生的是两个不同的类），也保证了 Java 的核心 API 不被篡改。如果没有使用双亲委派模型，而是每个类加载器加载自己的话就会出现一些问题，比如我们编写一个称为 <code>java.lang.Object</code> 类的话，那么程序运行的时候，系统就会出现多个不同的 <code>Object</code> 类。</p>
+<h2 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h2><p>通过反射可以获取任意一个类的所有属性和方法，还可以调用这些方法和属性。</p>
+<h3 id="获取Class对象的四种方式"><a href="#获取Class对象的四种方式" class="headerlink" title="获取Class对象的四种方式"></a>获取Class对象的四种方式</h3><ul>
+<li><code>Class alunbarClass = TargetObject.class;</code></li>
+<li><code>Class alunbarClass1 = Class.forName(&quot;cn.javaguide.TargetObject&quot;);</code></li>
+<li><code>TargetObject o = new TargetObject(); Class alunbarClass2 = o.getClass();</code></li>
+<li><code>Class clazz = ClassLoader.loadClass(&quot;cn.javaguide.TargetObject&quot;);</code></li>
+</ul>
+<p>使用Class对象生成实例：<code>TargetObject targetObject = (TargetObject) tagetClass.newInstance();</code></p>
+<h2 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h2><p>单例模式属于创建型模式的一种，在单例模式下，单例对象的类在任何时候都只能有唯一一个实例存在。</p>
+<p>许多时候整个系统只需要拥有一个的全局对象，这样有利于我们协调系统整体的行为。比如在某个服务器程序中，该服务器的配置信息存放在一个文件中，这些配置数据由一个单例对象统一读取，然后服务进程中的其他对象再通过这个单例对象获取这些配置信息。这种方式简化了在复杂环境下的配置管理。</p>
+<h4 id="1-双重校验锁实现"><a href="#1-双重校验锁实现" class="headerlink" title="1.双重校验锁实现"></a>1.双重校验锁实现</h4><div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Singleton</span> <span class="token punctuation">&#123;</span>
+    
+    <span class="token keyword">private</span> <span class="token keyword">volatile</span> <span class="token keyword">static</span> <span class="token class-name">Singleton</span> instance<span class="token punctuation">;</span>
+    
+    <span class="token keyword">private</span> <span class="token class-name">Singleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+    
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">Singleton</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>instance <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">synchronized</span> <span class="token punctuation">(</span><span class="token class-name">Singleton</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>instance <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                    instance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Singleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">&#125;</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span>
+        <span class="token keyword">return</span> instance<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<h2 id="JVM监控和故障处理命令"><a href="#JVM监控和故障处理命令" class="headerlink" title="JVM监控和故障处理命令"></a>JVM监控和故障处理命令</h2><ul>
+<li><strong>jps</strong>：类似于linux的ps命令，用于查看当前系统的java进程和进程id</li>
+<li><strong>jstat</strong>：用于收集HotSpot虚拟机各方面的运行数据，对资源和性能进行实时监控，如GC情况等</li>
+<li><strong>jinfo</strong>：显示虚拟机配置信息</li>
+<li><strong>jmap</strong>：打印某个java进程在内存中的所有对象情况</li>
+<li><strong>jhat</strong>：用于分析 heapdump 文件，它会建立一个 HTTP/HTML 服务器，让用户可以在浏览器上查看分析结果</li>
+<li><strong>jstack</strong>：生成虚拟机当前时刻的线程快照，线程快照就是当前虚拟机内每一条线程正在执行的方法堆栈的集合（排查死锁）</li>
+</ul>
+<h2 id="线程池"><a href="#线程池" class="headerlink" title="线程池"></a>线程池</h2><p><strong>线程池</strong>提供了一种限制和管理资源（包括执行一个任务）的方式。 每个<strong>线程池</strong>还维护一些基本统计信息，例如已完成任务的数量。</p>
+<p>使用线程池的好处：降低资源消耗、提高响应速度、提高线程的可管理性。</p>
+<p><strong>线程池核心参数</strong>：</p>
+<ul>
+<li><strong>corePoolSize</strong>：核心线程数量</li>
+<li><strong>maxmumPoolSize</strong>：最大线程数</li>
+<li><strong>keepAliveTime</strong>：当线程数大于核心线程数时，多余的空闲线程能存活的最长时间</li>
+<li><strong>unit</strong>：时间单位</li>
+<li><strong>workQueue</strong>：任务队列，用来存储等待执行的任务</li>
+<li><strong>threadFactory</strong>：线程工厂，用来创建线程，一般使用默认的</li>
+<li><strong>handler</strong>：拒绝策略，当提交的任务过多而不能及时处理时，可以制定策略来处置任务</li>
+</ul>
+<h2 id="volatile和synchronized"><a href="#volatile和synchronized" class="headerlink" title="volatile和synchronized"></a>volatile和synchronized</h2><h3 id="1-32位jdk中long和double存在的问题"><a href="#1-32位jdk中long和double存在的问题" class="headerlink" title="1.32位jdk中long和double存在的问题"></a>1.32位jdk中long和double存在的问题</h3><p>long和double是64位的，在32位的jdk中完成write操作是需要两次操作的（每次执行32位）。也就是long和double的write操作是非原子性的。非原子的操作在多线程环境下会有线程安全问题。比如A,B两个线程同时的去修改long类型x的值，可能x的高32位是A设置的，低32位是B设置的，导致结果不是程序想要的。</p>
+<p><strong>多线程环境下推荐将long和double使用volatile修饰</strong>：</p>
+<ul>
+<li>Acquire语义: Acquire 逻辑上的操作序列为’操作-向后同步’。Acquire操作要求所有后续内存访问都不得被乱序调换到该操作前执行。</li>
+<li>Release语义: Release 逻辑上的操作序列为’向前同步-操作’。Release操作要求所有前导内存访问都不得被乱序调换到该操作后执行</li>
+</ul>
+<p>使用Acquire和Release来将long和double所占用的64位内存空间的前后各32位上锁，证了只能有一个线程能完整的修改long和double。</p>
+<h3 id="2-synchronized-this-与synchronized-class-之间的区别"><a href="#2-synchronized-this-与synchronized-class-之间的区别" class="headerlink" title="2.synchronized(this) 与synchronized(class) 之间的区别"></a>2.synchronized(this) 与synchronized(class) 之间的区别</h3><ul>
+<li><strong>对象锁</strong>：在Java中，每个对象都有一个monitor对象，这个对象就是Java对象的锁，通常称作“内置锁”或者“对象锁”。类的对象可以有多个，所以每一个对象有其独立的对象锁，互不干扰。</li>
+<li><strong>类锁</strong>：每个类也有一个锁，称为“类锁”，类锁是通过Class类的对象锁实现的，每个类只有一个类锁。</li>
+</ul>
+<p>使用synchronized(this)可以获取到对象锁，而synchronized(class)可以获取到类锁。</p>
+<p>修饰静态方法会获取类锁，修饰非静态方法时获取对象锁。</p>
+<p>可以根据需要来将代码块进行修饰，以获取对象锁或者类锁。</p>
+<h1 id="框架八股"><a href="#框架八股" class="headerlink" title="框架八股"></a>框架八股</h1><h2 id="Spring-boot"><a href="#Spring-boot" class="headerlink" title="Spring boot"></a>Spring boot</h2><h3 id="Bean"><a href="#Bean" class="headerlink" title="@Bean"></a>@Bean</h3><p>生命周期：</p>
+<h3 id="AutoWird"><a href="#AutoWird" class="headerlink" title="@AutoWird"></a>@AutoWird</h3><h3 id="Transactional"><a href="#Transactional" class="headerlink" title="@Transactional"></a>@Transactional</h3><div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Target</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span><span class="token class-name">ElementType</span><span class="token punctuation">.</span>TYPE<span class="token punctuation">,</span> <span class="token class-name">ElementType</span><span class="token punctuation">.</span>METHOD<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@Retention</span><span class="token punctuation">(</span><span class="token class-name">RetentionPolicy</span><span class="token punctuation">.</span>RUNTIME<span class="token punctuation">)</span>
+<span class="token annotation punctuation">@Inherited</span>
+<span class="token annotation punctuation">@Documented</span>
+<span class="token keyword">public</span> <span class="token annotation punctuation">@interface</span> <span class="token class-name">Transactional</span> <span class="token punctuation">&#123;</span>
+    <span class="token annotation punctuation">@AliasFor</span><span class="token punctuation">(</span><span class="token string">"transactionManager"</span><span class="token punctuation">)</span>
+    <span class="token class-name">String</span> <span class="token function">value</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">default</span> <span class="token string">""</span><span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@AliasFor</span><span class="token punctuation">(</span><span class="token string">"value"</span><span class="token punctuation">)</span>
+    <span class="token class-name">String</span> <span class="token function">transactionManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">default</span> <span class="token string">""</span><span class="token punctuation">;</span>
+
+    <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">label</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">default</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 事务传播机制</span>
+    <span class="token class-name">Propagation</span> <span class="token function">propagation</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">default</span> <span class="token class-name">Propagation</span><span class="token punctuation">.</span>REQUIRED<span class="token punctuation">;</span>
+
+    <span class="token comment">// 隔离级别，Isolation.DEFAULT：表示和数据库使用相同的隔离级别</span>
+    <span class="token class-name">Isolation</span> <span class="token function">isolation</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">default</span> <span class="token class-name">Isolation</span><span class="token punctuation">.</span>DEFAULT<span class="token punctuation">;</span>
+
+    <span class="token comment">// 事务处理的最长时间</span>
+    <span class="token keyword">int</span> <span class="token function">timeout</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">default</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+
+    <span class="token class-name">String</span> <span class="token function">timeoutString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">default</span> <span class="token string">""</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 标识当前事务是否是只读的</span>
+    <span class="token keyword">boolean</span> <span class="token function">readOnly</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">default</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+
+    <span class="token class-name">Class</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span> <span class="token keyword">extends</span> <span class="token class-name">Throwable</span><span class="token punctuation">></span></span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">rollbackFor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">default</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+    <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">rollbackForClassName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">default</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+    <span class="token class-name">Class</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span> <span class="token keyword">extends</span> <span class="token class-name">Throwable</span><span class="token punctuation">></span></span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">noRollbackFor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">default</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+    <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">noRollbackForClassName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">default</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<p>@Transactional失效的场景：</p>
+<ul>
+<li>使用在非public方法上，此时不支持回滚</li>
+<li>属性prapagation、rollbackFor参数设置错误</li>
+<li>异常被catch处理了，导致无法回滚</li>
+<li>数据库本身就不支持事务</li>
+</ul>
+<h1 id="系统设计"><a href="#系统设计" class="headerlink" title="系统设计"></a>系统设计</h1><h2 id="处理重复请求"><a href="#处理重复请求" class="headerlink" title="处理重复请求"></a>处理重复请求</h2><p>由于黑客拦截重放攻击、前端故障、用户操作不当等，可能会导致服务端收到大量重复的请求，当请求涉及到写入时，会造成严重的后果。</p>
+<p>解决方案：</p>
+<h3 id="方案1-使用唯一请求编号去重"><a href="#方案1-使用唯一请求编号去重" class="headerlink" title="方案1: 使用唯一请求编号去重"></a>方案1: 使用唯一请求编号去重</h3><p>客户端每次请求时，都会带着服务端生成的唯一编号，服务端每次收到请求，先检查「redis」中是否已经存在该唯一编号，存在的话就认为是重复请求；否则接受请求，并将该编号写入redis。</p>
+<p>缺点：不切合实际，大多数场景的请求都不会带有唯一编号。</p>
+<h3 id="方案2-使用业务参数去重"><a href="#方案2-使用业务参数去重" class="headerlink" title="方案2: 使用业务参数去重"></a>方案2: 使用业务参数去重</h3><p>将请求参数、方法等拼接成一个字符串，以唯一标识一个请求，例如：</p>
+<div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">String</span> KEY <span class="token operator">=</span> <span class="token string">"dedup:U="</span><span class="token operator">+</span>userId <span class="token operator">+</span> <span class="token string">"M="</span> <span class="token operator">+</span> method <span class="token operator">+</span> <span class="token string">"P="</span> <span class="token operator">+</span> reqParam<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div>
+<p>当参数过长时，可以使用参数拼接后的「md5」值来进行「KEY」的拼接，例如：</p>
+<div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">String</span> KEY <span class="token operator">=</span> <span class="token string">"dedup:U="</span><span class="token operator">+</span>userId <span class="token operator">+</span> <span class="token string">"M="</span> <span class="token operator">+</span> method <span class="token operator">+</span> <span class="token string">"P="</span> <span class="token operator">+</span> reqParamMD5<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div>
+<p>要注意的是，用来进行拼接的参数，要避免使用时间类型、地理位置类型等易变的数据类型，因为用户可能在1秒内点击三次，如果使用参数里的请求时间的话，这三次请求会被认为是不同的请求。</p>
+<h2 id="限流"><a href="#限流" class="headerlink" title="限流"></a>限流</h2><p>限流就是对请求的速率进行限制，避免瞬时的大量请求击垮软件系统。</p>
+<h3 id="方案1-Redis实现简单限流"><a href="#方案1-Redis实现简单限流" class="headerlink" title="方案1: Redis实现简单限流"></a>方案1: Redis实现简单限流</h3><p>场景：在指定时间内，最多只允许通过一定数量的请求。</p>
+<p>方案：维护一个滑动窗口，窗口大小为时间区间大小，窗口内的数据条数要小于限定的请求数量。</p>
+<p>具体过程：每来一个请求，就以当前时间的毫秒数作为zset中member的score值，member名称需要保证不重复即可。当当前时间戳和一分钟之前时间戳之间的member数量小于限定值时，就接受该请求，并将该请求写入zset，否则拒绝请求。</p>
+<div class="code-wrapper"><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">zcount key min max <span class="token comment"># 获取score值在区间[min, max]之前的元素数量</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div>
+<h2 id="分布式锁"><a href="#分布式锁" class="headerlink" title="分布式锁"></a>分布式锁</h2><h3 id="方案1-Redis实现分布式锁"><a href="#方案1-Redis实现分布式锁" class="headerlink" title="方案1:Redis实现分布式锁"></a>方案1:Redis实现分布式锁</h3><ul>
+<li>场景：用户抢优惠券，领完一张，优惠券数量减一，领完便不允许再抢。由于采用多台服务器来处理请求，如果不加以限制，便会导致数据不一致发生。</li>
+<li>方案：采用redis实现分布式锁，通过互斥的方式让服务器来对优惠券数量进行操作，防止多个客户端同时去更新优惠券数量。</li>
+</ul>
+<p>设计锁的思路：</p>
+<ul>
+<li>1.互斥性：在任意时刻，只能有一个客户端能持有锁</li>
+<li>2.不能产生死锁：需要有释放锁的策略</li>
+<li>3.非剥夺：加锁和释放锁必须是同一个客户端</li>
+</ul>
+<p>具体方案：</p>
+<p>先使用<code>setnx (set if not exists)</code>来尝试将某个key设值（加锁），如果失败，就不断的重试。如果成功，便进行数据库的更新，然后将key从redis中移除（<code>delete</code>）。</p>
+<p>上述方案可能会由于加锁的服务器异常而无法移除key，从而导致死锁，所以要为key设置一个过期时间(<code>expire</code>)来避免。</p>
+<p>可以使用一个自己独有的value（雪花算法：分布式全局唯一ID、UUID）来标识某个key是不是自己生成的。</p>
+<h3 id="方案二：使用ZooKeeper实现分布式锁"><a href="#方案二：使用ZooKeeper实现分布式锁" class="headerlink" title="方案二：使用ZooKeeper实现分布式锁"></a>方案二：使用ZooKeeper实现分布式锁</h3><h3 id="方案三：使用数据库锁实现分布式锁"><a href="#方案三：使用数据库锁实现分布式锁" class="headerlink" title="方案三：使用数据库锁实现分布式锁"></a>方案三：使用数据库锁实现分布式锁</h3><ul>
+<li>悲观锁：使用<code>select ... where name = &#39;lock&#39;...forupdate</code>获得排他锁，name字段必须要走索引，否则会锁住整张表。</li>
+<li>乐观锁：基于数据版本，在基于数据库表的版本解决方案中，一般是通过为数据库表增加一个”version”字段来实现读取出数据时，将此版本号一同读出，之后更新时，对此版本号加1。此时，将提交数据的版本号与数据库表对应记录的当前版本号进行比对，如果提交的数据版本号大于数据库当前版本号，则予以更新，否则认为是过期数据。</li>
+</ul>
+<h1 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h1><h2 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">指令</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">用法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">top</td>
+<td style="text-align:center">查看总体的运行状态和CPU使用率</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">telnet</td>
+<td style="text-align:center">远程登录，判断远程服务器端口是否打开</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">free</td>
+<td style="text-align:center">查看内存使用情况</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">df</td>
+<td style="text-align:center">查看硬盘使用情况</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>1.<a target="_blank" rel="noopener" href="https://juejin.cn/post/6882984260672847879#heading-25">彻底理解 IO 多路复用实现机制</a></p>
+<p>2.<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1843848">如何优雅处理重复请求/并发请求？</a></p>
+<p>3.<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-cn/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F">https://zh.wikipedia.org/zh-cn/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/">软件开发</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%A7%8B%E6%8B%9B/">秋招</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%AC%94%E8%AF%95/">笔试</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/">面试题</a>
+                    
+                  </div>
+                
+              </div>
+
+              
+                <p class="note note-warning">
+		  <strong>本文作者: </strong><a href="/">MerickBao</a> <br>
+		  <strong>本文链接: </strong><a href="https://merickbao.top/post/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A7%8B%E6%8B%9B%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB.html">https://merickbao.top/post/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E7%A7%8B%E6%8B%9B%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB.html</a> <br>
+		  <strong>版权声明: </strong>本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                </p>
+              
+
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/post/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/JWT%E6%80%BB%E7%BB%93.html">
+                        <span class="hidden-mobile">JWT总结</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#valine",
+          app_id: "C98PibKeXxixh9pLTSwW9s6L-MdYXbMMI",
+          app_key: "DuzfPVdmfW6udONFaQsg4u67",
+          placeholder: "请在～哔～声后留言，～哔～",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+          master: "e145bb51e1173b61bad92a2a36af2e47",
+          friends: "dd229cf217659158ed1a0e1256effb36",
+          tagMeta: ["博主","友人","访客"],
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+    
+  <div>
+  <span id="timeDate">载入天数...</span>
+  <span id="times">载入时分秒...</span>
+  <script>
+  var now = new Date();
+  function createtime(){
+      var grt= new Date("05/20/2021 00:00:00");//此处修改你的建站时间或者网站上线时间
+      now.setTime(now.getTime()+250);
+      days = (now - grt ) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum);
+      hnum = Math.floor(hours);
+      if(String(hnum).length ==1 ){
+          hnum = "0" + hnum;
+      }
+      minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+      mnum = Math.floor(minutes);
+      if(String(mnum).length ==1 ){
+                mnum = "0" + mnum;
+      }
+      seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+      snum = Math.round(seconds);
+      if(String(snum).length ==1 ){
+                snum = "0" + snum;
+      }
+      document.getElementById("timeDate").innerHTML = "已正常运行 &nbsp"+dnum+"&nbsp 天";  //此次自定义显示内容
+      document.getElementById("times").innerHTML = hnum + "&nbsp小时&nbsp" + mnum + "&nbsp分钟&nbsp" + snum + "&nbsp秒";
+  }  //此次自定义显示内容
+  setInterval("createtime()",250);
+  </script>
+</div>
+
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+    
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.2/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

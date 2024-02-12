@@ -1,0 +1,1157 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/bg/favicon.png">
+  <link rel="icon" href="/img/bg/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="MerickBaoの博客 ｜ 分享使我们更加强大">
+  <meta name="author" content="MerickBao">
+  <meta name="keywords" content="">
+  
+  <title>CMU数据库系统作业自查(CMU Databases Systems / Fall 2019) - MerickBaoの博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      
+        
+          
+        
+        <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.min.css" />
+      
+      
+        <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.min.css" />
+      
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"merickbao.top","root":"/","version":"1.8.10","typing":{"enable":true,"typeSpeed":70,"cursorChar":"❀","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>MerickBaoの博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/movies/">
+                <i class="iconfont icon-douban-fill"></i>
+                douban
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/bg/bg_31.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="CMU数据库系统作业自查(CMU Databases Systems / Fall 2019)">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      MerickBao
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2024-02-12 21:08" pubdate>
+        2024年2月12日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3.3k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      59
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">CMU数据库系统作业自查(CMU Databases Systems / Fall 2019)</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2024年2月12日 晚上
+                
+              </p>
+            
+            <div class="markdown-body">
+              <p><a target="_blank" rel="noopener" href="https://15445.courses.cs.cmu.edu/fall2021/homework1/">HOMEWORK #1 - SQL</a></p>
+<p><a target="_blank" rel="noopener" href="https://15445.courses.cs.cmu.edu/fall2021/files/hw1_sol.zip">Solution</a></p>
+<p>课听的是<a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLSE8ODhjZXjbohkNBWQs_otTrBTrjyohi">2019年</a>,作业作的是2021年，只因为<a target="_blank" rel="noopener" href="http://www.cs.cmu.edu/~pavlo/">Andy Pavlo</a>的风格是我理想中老师的样子，听课就像看美剧一样。</p>
+<h1 id="HOMEWORK-1-SQL"><a href="#HOMEWORK-1-SQL" class="headerlink" title="HOMEWORK #1 - SQL"></a>HOMEWORK #1 - SQL</h1><h2 id="Q1-0-POINTS-Q1-SAMPLE"><a href="#Q1-0-POINTS-Q1-SAMPLE" class="headerlink" title="Q1 [0 POINTS] (Q1_SAMPLE):"></a>Q1 [0 POINTS] (Q1_SAMPLE):</h2><p>sqlite3查询语句:</p>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">SELECT CategoryName FROM Category ORDER BY CategoryName;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div>
+<p>输出：</p>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">Beverages
+Condiments
+Confections
+Dairy Products
+Grains&#x2F;Cereals
+Meat&#x2F;Poultry
+Produce
+Seafood<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<h2 id="Q2-5-POINTS-Q2-STRING-FUNCTION"><a href="#Q2-5-POINTS-Q2-STRING-FUNCTION" class="headerlink" title="Q2 [5 POINTS] (Q2_STRING_FUNCTION):"></a>Q2 [5 POINTS] (Q2_STRING_FUNCTION):</h2><p>Get all unique <code>ShipNames</code> from the Order table that contain a hyphen <code>&#39;-&#39;</code>.</p>
+<p><strong>Details:</strong> In addition, get all the characters preceding the (first) hyphen. Return ship names alphabetically. Your first row should look like <code>Bottom-Dollar Markets|Bottom</code></p>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">-- 从string截取从start到end之间的字符串，包括start和end位置的字符
+substr( string, start, length )
+-- SELECT substr(&#39;SQLite substr&#39;, 1, 6);
+
+-- 返回指定字符串在str中出现的第一个位置的下标
+instr(String str, String target)
+-- SELECT INSTR(&#39;SQLite Tutorial&#39;,&#39;Tutorial&#39;) position &#x3D; 8;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">SELECT DISTINCT ShipName, SUBSTR(ShipName, 1, INSTR(ShipName, &#39;-&#39;) - 1) 
+FROM &#39;Order&#39; 
+WHERE ShipName LIKE &quot;%-%&quot; 
+ORDER BY ShipName;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></div>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">Bottom-Dollar Markets|Bottom
+Chop-suey Chinese|Chop
+GROSELLA-Restaurante|GROSELLA
+HILARION-Abastos|HILARION
+Hungry Owl All-Night Grocers|Hungry Owl All
+LILA-Supermercado|LILA
+LINO-Delicateses|LINO
+QUICK-Stop|QUICK
+Save-a-lot Markets|Save<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<p>答案：结果正确，sql语句基本一致，细节需要注意。</p>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">SELECT DISTINCT ShipName, substr(ShipName, 0, instr(ShipName, &#39;-&#39;)) as PreHyphen
+FROM &#39;Order&#39;
+WHERE ShipName LIKE &#39;%-%&#39;
+ORDER BY ShipName ASC;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></div>
+<h2 id="Q3-5-POINTS-Q3-NORTHAMERICAN"><a href="#Q3-5-POINTS-Q3-NORTHAMERICAN" class="headerlink" title="Q3 [5 POINTS] (Q3_NORTHAMERICAN):"></a>Q3 [5 POINTS] (Q3_NORTHAMERICAN):</h2><p>Indicate if an order’s <code>ShipCountry</code> is in North America. For our purposes, this is <code>&#39;USA&#39;, &#39;Mexico&#39;, &#39;Canada&#39;</code></p>
+<p><strong>Details:</strong> You should print the Order <code>Id</code>, <code>ShipCountry</code>, and another column that is either <code>&#39;NorthAmerica&#39;</code> or <code>&#39;OtherPlace&#39;</code> depending on the Ship Country.<br>Order by the primary key (<code>Id</code>) ascending and return 20 rows starting from Order Id <code>15445</code> Your output should look like <code>15445|France|OtherPlace</code> or <code>15454|Canada|NorthAmerica</code></p>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">SELECT 
+	Id, 
+	ShipCountry, 
+	CASE ShipCountry 
+		WHEN &#39;USA&#39; 
+			THEN &#39;NorthAmerica&#39; 
+		WHEN &#39;Mexico&#39; 
+			THEN &#39;NorthAmerica&#39; 
+		WHEN &#39;Canada&#39; 
+			THEN &#39;NorthAmerica&#39; 
+		ELSE &#39;OtherPlace&#39; 
+	END region
+FROM &#39;Order&#39;
+WHERE Id &gt;&#x3D; 15445
+ORDER BY Id ASC
+LIMIT 20;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">15445|France|OtherPlace
+15446|Italy|OtherPlace
+15447|Portugal|OtherPlace
+15448|Argentina|OtherPlace
+15449|Portugal|OtherPlace
+15450|Venezuela|OtherPlace
+15451|Brazil|OtherPlace
+15452|France|OtherPlace
+15453|France|OtherPlace
+15454|Canada|NorthAmerica
+15455|USA|NorthAmerica
+15456|France|OtherPlace
+15457|Mexico|NorthAmerica
+15458|USA|NorthAmerica
+15459|Germany|OtherPlace
+15460|Argentina|OtherPlace
+15461|Austria|OtherPlace
+15462|Austria|OtherPlace
+15463|Finland|OtherPlace
+15464|Brazil|OtherPlace<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<p>答案：结果正确。sql语句冗长，需要改进。</p>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">SELECT Id, ShipCountry, 
+       CASE 
+              WHEN ShipCountry IN (&#39;USA&#39;, &#39;Mexico&#39;,&#39;Canada&#39;)
+              THEN &#39;NorthAmerica&#39;
+              ELSE &#39;OtherPlace&#39;
+       END
+FROM &#39;Order&#39;
+WHERE Id &gt;&#x3D; 15445
+ORDER BY Id ASC
+LIMIT 20;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<h2 id="Q4-10-POINTS-Q4-DELAYPERCENT"><a href="#Q4-10-POINTS-Q4-DELAYPERCENT" class="headerlink" title="Q4 [10 POINTS] (Q4_DELAYPERCENT):"></a>Q4 [10 POINTS] (Q4_DELAYPERCENT):</h2><p>For each <code>Shipper</code>, find the percentage of orders which are late.</p>
+<p><strong>Details:</strong> An order is considered late if <code>ShippedDate &gt; RequiredDate</code>. Print the following format, order by descending precentage, rounded to the nearest hundredths, like <code>United Package|23.44</code></p>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">-- 四舍五入的保留小数点后n位有效数字
+ROUND(real target, num n)
+-- ROUND(1.235, 2) &#x3D; 1.24
+
+-- JOIN：连接两个表，默认是内连接（返回两表共有的部分）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">SELECT 
+	CASE a.ShipVia
+		WHEN 1
+			THEN &#39;Speedy Express&#39;
+		WHEN 2
+			THEN &#39;United Package&#39;
+		ELSE &#39;Federal Shipping&#39;
+	END CompanyName,
+	ROUND((a.cnt * 1.0 &#x2F; b.cnt) * 100, 2) precentage
+	FROM
+        (
+            SELECT ShipVia, COUNT(ShipVia) AS cnt
+            FROM &#39;Order&#39;
+            WHERE ShippedDate &gt; RequiredDate
+            GROUP BY ShipVia
+        ) a
+        JOIN
+        (
+            SELECT ShipVia, COUNT(ShipVia) AS cnt
+            FROM &#39;Order&#39;
+            GROUP BY ShipVia
+        ) b ON (a.ShipVia &#x3D; b.ShipVia)
+ORDER BY precentage DESC;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">Federal Shipping|23.61
+Speedy Express|23.46
+United Package|23.44<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></div>
+<p>答案：结果正确。sql语句冗长，可以使用多次「JOIN」来连接多个表。</p>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">SELECT CompanyName, round(delayCnt * 100.0 &#x2F; cnt, 2) AS pct
+FROM (
+      SELECT ShipVia, COUNT(*) AS cnt 
+      FROM &#39;Order&#39;
+      GROUP BY ShipVia
+     ) AS totalCnt
+INNER JOIN (
+            SELECT ShipVia, COUNT(*) AS delaycnt 
+            FROM &#39;Order&#39;
+            WHERE ShippedDate &gt; RequiredDate 
+            GROUP BY ShipVia
+           ) AS delayCnt
+          ON totalCnt.ShipVia &#x3D; delayCnt.ShipVia
+INNER JOIN Shipper on totalCnt.ShipVia &#x3D; Shipper.Id
+ORDER BY pct DESC;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<h2 id="Q5-10-POINTS-Q5-AGGREGATES"><a href="#Q5-10-POINTS-Q5-AGGREGATES" class="headerlink" title="Q5 [10 POINTS] (Q5_AGGREGATES):"></a>Q5 [10 POINTS] (Q5_AGGREGATES):</h2><p>Compute some statistics about categories of products</p>
+<p><strong>Details:</strong> Get the number of products, average unit price (rounded to 2 decimal places), minimum unit price, maximum unit price, and total units on order for categories containing greater than 10 products.<br>Order by <code>Category Id</code>. Your output should look like <code>Beverages|12|37.98|4.5|263.5|60</code></p>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">-- 在使用聚合函数时使用条件判断：Having 关键字<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">SELECT b.CategoryName, a.cnt, a.avg_price, a.min_price, a.max_price, a.sum_units
+FROM
+	(
+        SELECT CategoryId, COUNT(CategoryId) cnt, ROUND(AVG(UnitPrice), 2) avg_price, MIN(UnitPrice) min_price, MAX(UnitPrice) max_price, SUM(UnitsONOrder) sum_units
+        FROM Product
+        GROUP BY CategoryId
+        HAVING cnt &gt;&#x3D; 10
+    ) a
+    JOIN
+    (
+        SELECT DISTINCT(CategoryId), CategoryName
+        FROM Productdetails_V
+    ) b 
+    ON a.CategoryId &#x3D; b.CategoryId
+ORDER BY a.CategoryId;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">Beverages|12|37.98|4.5|263.5|60
+Condiments|12|23.06|10|43.9|170
+Confections|13|25.16|9.2|81|180
+Dairy Products|10|28.73|2.5|55|140 -- 等于10个产品，不应该计算在内。
+Seafood|12|20.68|6|62.5|120<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<p>答案：结果错误，结果应该大于10个产品。sql语句先连接后计算会比较简洁。</p>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">SELECT CategoryName
+     , COUNT(*) AS CategoryCount
+     , ROUND(AVG(UnitPrice), 2) AS AvgUnitPrice
+     , MIN(UnitPrice) AS MinUnitPrice
+     , MAX(UnitPrice) AS MaxUnitPrice
+     , SUM(UnitsOnOrder) AS TotalUnitsOnOrder
+FROM Product INNER JOIN Category on CategoryId &#x3D; Category.Id
+GROUP BY CategoryId
+HAVING CategoryCount &gt; 10
+ORDER BY CategoryId;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">Beverages|12|37.98|4.5|263.5|60
+Condiments|12|23.06|10|43.9|170
+Confections|13|25.16|9.2|81|180
+Seafood|12|20.68|6|62.5|120<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></div>
+<h2 id="Q6-10-POINTS-Q6-DISCONTINUED"><a href="#Q6-10-POINTS-Q6-DISCONTINUED" class="headerlink" title="Q6 [10 POINTS] (Q6_DISCONTINUED):"></a>Q6 [10 POINTS] (Q6_DISCONTINUED):</h2><p>Of the 8 discontinued products in the database, what is the customer’s <code>CompanyName</code> and <code>ContactName</code> of the first order ever made for this product?</p>
+<p><strong>Details:</strong> Print the following format, order by <code>ProductName</code> alphabetically: <code>Alice Mutton|Consolidated Holdings|Elizabeth Brown</code></p>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">SELECT c.ProductName, d.CompanyName, d.ContactName
+FROM
+    (
+        SELECT a.ProductName, b.CustomerId, MIN(b.OrderDate)
+        FROM
+            (
+                SELECT od.OrderId, pd.ProductName
+                FROM
+                    OrderDetail od
+                    JOIN
+                    (
+                        SELECT Id, ProductName
+                        FROM Product
+                        WHERE Discontinued &#x3D; 1
+                    ) pd
+                    ON od.ProductId &#x3D; pd.Id
+            ) a
+            JOIN
+            (
+                &#39;Order&#39;
+            ) b
+            ON a.OrderId &#x3D; b.Id
+        GROUP BY a.ProductName
+    ) c
+    JOIN
+    (Customer) d
+    ON c.CustomerId &#x3D; d.id
+ORDER BY c.ProductName;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">Alice Mutton|Consolidated Holdings|Elizabeth Brown
+Chef Anton&#39;s Gumbo Mix|Piccolo und mehr|Georg Pipps
+Guaraná Fantástica|Piccolo und mehr|Georg Pipps
+Mishi Kobe Niku|Old World Delicatessen|Rene Phillips
+Perth Pasties|Piccolo und mehr|Georg Pipps
+Rössle Sauerkraut|Piccolo und mehr|Georg Pipps
+Singaporean Hokkien Fried Mee|Vins et alcools Chevalier|Paul Henriot
+Thüringer Rostbratwurst|Piccolo und mehr|Georg Pipps<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<p>答案：结果正确。sql应先使用多次连接再查询，会简洁一些。</p>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">SELECT pname, CompanyName, ContactName
+FROM (
+      SELECT pname, min(OrderDate), CompanyName, ContactName
+      FROM (
+            SELECT Id AS pid, ProductName AS pname 
+            FROM Product 
+            WHERE Discontinued !&#x3D; 0
+           ) as discontinued
+      INNER JOIN OrderDetail on ProductId &#x3D; pid
+      INNER JOIN &#39;Order&#39; on &#39;Order&#39;.Id &#x3D; OrderDetail.OrderId
+      INNER JOIN Customer on CustomerId &#x3D; Customer.Id
+      GROUP BY pid
+    )
+ORDER BY pname ASC;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<h2 id="Q7-15-POINTS-Q7-ORDER-LAGS"><a href="#Q7-15-POINTS-Q7-ORDER-LAGS" class="headerlink" title="Q7 [15 POINTS] (Q7_ORDER_LAGS):"></a>Q7 [15 POINTS] (Q7_ORDER_LAGS):</h2><p>For the first 10 orders by <code>CutomerId BLONP</code>: get the Order’s <code>Id</code>, <code>OrderDate</code>, previous <code>OrderDate</code>, and difference between the previous and current. Return results ordered by <code>OrderDate</code> (ascending)</p>
+<p><strong>Details:</strong> The “previous” <code>OrderDate</code> for the first order should default to itself (lag time = 0). Use the <code>julianday()</code> function for date arithmetic (<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/289680/difference-between-2-dates-in-sqlite">example</a>).<br>Use <a target="_blank" rel="noopener" href="https://www.sqlitetutorial.net/sqlite-window-functions/sqlite-lag/">lag(expr, offset, default)</a> for grabbing previous dates.<br>Please round the lag time to the nearest hundredth, formatted like <code>17361|2012-09-19 12:13:21|2012-09-18 22:37:15|0.57</code></p>
+<p><strong>Note:</strong> For more details on window functions, see <a target="_blank" rel="noopener" href="https://www.sqlite.org/windowfunctions.html">here</a>.</p>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">-- LAG(express, offset, default)：找到当前元组的上一offset个元组，并根据express返回前面行的值（必须是单一值）
+-- express：是根据指定的偏移量对前一行的值求值的表达式。表达式必须返回单个值。
+-- offset：两行之间的偏移量
+-- default：默认值，当找不到上一行时返回该值
+-- PARTITION BY：根据表达式（属性）来进行分组
+LAG(express, offset, default) OVER (PARTITION BY expr1, expr2,... ORDER BY exp1 ASC, exp2 DESC)
+
+-- julianday(now) - julianday(before)：now和before之间的时间差，单位为天<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">SELECT 
+	Id, 
+	OrderDate, 
+	LAG(OrderDate, 1, 0) OVER (ORDER BY OrderDate),
+	ROUND
+	(
+        julianday(OrderDate) - 
+        julianday(
+            LAG(OrderDate, 1, OrderDate) 
+            OVER (ORDER BY OrderDate)
+        ),
+        2
+    )
+FROM &#39;Order&#39;
+WHERE CustomerId &#x3D; &#39;BLONP&#39;
+ORDER BY OrderDate ASC
+LIMIT 10;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">16766|2012-07-22 23:11:15|0|0.0 -- 初始默认值应该使用该天的日期。
+10265|2012-07-25|2012-07-22 23:11:15|2.03
+12594|2012-08-16 12:35:15|2012-07-25|22.52
+20249|2012-08-16 16:52:23|2012-08-16 12:35:15|0.18
+20882|2012-08-18 19:11:48|2012-08-16 16:52:23|2.1
+18443|2012-08-28 05:34:03|2012-08-18 19:11:48|9.43
+10297|2012-09-04|2012-08-28 05:34:03|6.77
+11694|2012-09-17 00:27:14|2012-09-04|13.02
+25613|2012-09-18 22:37:15|2012-09-17 00:27:14|1.92
+17361|2012-09-19 12:13:21|2012-09-18 22:37:15|0.57<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<p>答案：答案错误，初始「LAG」函数默认时间应该是该天，也算合理。sql语句还行。</p>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">SELECT
+     Id
+     , OrderDate
+     , PrevOrderDate
+     , ROUND(julianday(OrderDate) - julianday(PrevOrderDate), 2)
+FROM (
+     SELECT Id
+          , OrderDate
+          , LAG(OrderDate, 1, OrderDate) OVER (ORDER BY OrderDate ASC) AS PrevOrderDate
+     FROM &#39;Order&#39; 
+     WHERE CustomerId &#x3D; &#39;BLONP&#39;
+     ORDER BY OrderDate ASC
+     LIMIT 10
+);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">16766|2012-07-22 23:11:15|2012-07-22 23:11:15|0.0
+10265|2012-07-25|2012-07-22 23:11:15|2.03
+12594|2012-08-16 12:35:15|2012-07-25|22.52
+20249|2012-08-16 16:52:23|2012-08-16 12:35:15|0.18
+20882|2012-08-18 19:11:48|2012-08-16 16:52:23|2.1
+18443|2012-08-28 05:34:03|2012-08-18 19:11:48|9.43
+10297|2012-09-04|2012-08-28 05:34:03|6.77
+11694|2012-09-17 00:27:14|2012-09-04|13.02
+25613|2012-09-18 22:37:15|2012-09-17 00:27:14|1.92
+17361|2012-09-19 12:13:21|2012-09-18 22:37:15|0.57<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<h2 id="Q8-15-POINTS-Q8-TOTAL-COST-QUARTILES"><a href="#Q8-15-POINTS-Q8-TOTAL-COST-QUARTILES" class="headerlink" title="Q8 [15 POINTS] (Q8_TOTAL_COST_QUARTILES):"></a>Q8 [15 POINTS] (Q8_TOTAL_COST_QUARTILES):</h2><p>For each <code>Customer</code>, get the CompanyName, CustomerId, and “total expenditures”. Output the bottom quartile of Customers, as measured by total expenditures.</p>
+<p><strong>Details:</strong> Calculate expenditure using <code>UnitPrice</code> and <code>Quantity</code> (ignore <code>Discount</code>). Compute the quartiles for each company’s total expenditures using <a target="_blank" rel="noopener" href="https://www.sqlitetutorial.net/sqlite-window-functions/sqlite-ntile/">NTILE</a>. The bottom quartile is the 1st quartile, order them by increasing expenditure.<br>Make sure your output is formatted as follows (round expenditure to nearest hundredths): <code>Bon app|BONAP|4485708.49</code></p>
+<p><strong>Note:</strong> There are orders for <code>CustomerId</code>s that don’t appear in the <code>Customer</code> table. You should still consider these “Customers” and output them. If the <code>CompanyName</code> is missing, override the <code>NULL</code> to <code>&#39;MISSING_NAME&#39;</code> using <code>IFNULL</code>. </p>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">-- sqlite不支持右连接，左连接保留左边表的所有值，未匹配的为NULL
+
+-- IFNULL(express1, express2)：当express1的值为NULL时用express2来代替
+
+-- 分桶函数：num：桶的数量
+-- NTILE(num) OVER(PARTITION BY expr1, ... ORDER expr1 [ASC|DESC],...)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">SELECT 
+	IFNULL(t2.CompanyName, &quot;MISSING_NAME&quot;),
+	t1.CustomerId,
+	ROUND(t1.s, 2)
+FROM
+	(
+        SELECT 
+            a.CustomerId, 
+            SUM(b.Quantity * b.UnitPrice) s,
+            NTILE(4) OVER (
+                ORDER BY SUM(b.Quantity * b.UnitPrice) ASC
+            ) bkt
+        FROM
+            &#39;Order&#39; a
+            JOIN
+            OrderDetail b
+            ON a.Id &#x3D; b.OrderId
+        GROUP BY a.CustomerId
+    ) t1
+    LEFT JOIN 
+    Customer t2
+    ON t2.Id &#x3D; t1.customerId
+WHERE t1.bkt &#x3D; 1;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">MISSING_NAME|DUMO|1615.9
+MISSING_NAME|OCEA|3460.2
+MISSING_NAME|ANTO|7515.35
+MISSING_NAME|QUEE|30226.1
+Trail&#39;s Head Gourmet Provisioners|TRAIH|3874502.02
+Blondesddsl père et fils|BLONP|3879728.69
+Around the Horn|AROUT|4395636.28
+Hungry Owl All-Night Grocers|HUNGO|4431457.1
+Bon app|BONAP|4485708.49
+Bólido Comidas preparadas|BOLID|4520121.88
+Galería del gastrónomo|GALED|4533089.9
+FISSA Fabrica Inter. Salchichas S.A.|FISSA|4554591.02
+Maison Dewey|MAISD|4555931.37
+Cactus Comidas para llevar|CACTU|4559046.87
+Spécialités du monde|SPECD|4571764.89
+Magazzini Alimentari Riuniti|MAGAA|4572382.35
+Toms Spezialit?ten|TOMSP|4628403.36
+Split Rail Beer &amp; Ale|SPLIR|4641383.53
+Santé Gourmet|SANTG|4647668.15
+Morgenstern Gesundkost|MORGK|4676234.2
+White Clover Markets|WHITC|4681531.74
+La corne d&#39;abondance|LACOR|4724494.22
+Victuailles en stock|VICTE|4726476.33
+Lonesome Pine Restaurant|LONEP|4735780.66<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<p>答案：结果正确。sql语句各有千秋，没有使用「WITH」语句来建立两个临时表。</p>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">WITH expenditures AS (
+    SELECT
+        IFNULL(c.CompanyName, &#39;MISSING_NAME&#39;) AS CompanyName,
+        o.CustomerId,
+        ROUND(SUM(od.Quantity * od.UnitPrice), 2) AS TotalCost
+    FROM &#39;Order&#39; AS o
+    INNER JOIN OrderDetail od on od.OrderId &#x3D; o.Id
+    LEFT JOIN Customer c on c.Id &#x3D; o.CustomerId
+    GROUP BY o.CustomerId
+),
+quartiles AS (
+    SELECT *, NTILE(4) OVER (ORDER BY TotalCost ASC) AS ExpenditureQuartile
+    FROM expenditures
+)
+SELECT CompanyName, CustomerId, TotalCost
+FROM quartiles
+WHERE ExpenditureQuartile &#x3D; 1
+ORDER BY TotalCost ASC;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<h2 id="Q9-15-POINTS-Q9-YOUNGBLOOD"><a href="#Q9-15-POINTS-Q9-YOUNGBLOOD" class="headerlink" title="Q9 [15 POINTS] (Q9_YOUNGBLOOD):"></a>Q9 [15 POINTS] (Q9_YOUNGBLOOD):</h2><p>Find the youngest employee serving each <code>Region</code>. If a Region is not served by an employee, ignore it.</p>
+<p><strong>Details:</strong> Print the Region Description, First Name, Last Name, and Birth Date. Order by Region Id.<br>Your first row should look like <code>Eastern|Steven|Buchanan|1987-03-04</code></p>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">xxxx -- 多表连接，只能嵌套连接
+-- 多表连接，可以使用多次「JOIN」<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></div>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">SELECT a.RegionDescription, b.FirstName, b.LastName, MAX(b.BirthDate)
+FROM
+    (
+       SELECT a.EmployeeId, r.RegionDescription, r.Id
+       FROM
+            (
+                SELECT et.EmployeeId, t.Id, t.RegionId
+                FROM 
+                    EmployeeTerritory et
+                    JOIN 
+                    Territory t
+                    ON et.TerritoryId &#x3D; t.Id
+            ) a
+            JOIN
+            Region r
+            ON a.RegionId &#x3D; r.Id
+    ) a
+    JOIN
+    Employee b
+    ON a.EmployeeId &#x3D; b.Id
+GROUP BY a.Id
+ORDER BY a.Id;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">Eastern|Steven|Buchanan|1987-03-04
+Western|Michael|Suyama|1995-07-02
+Northern|Anne|Dodsworth|1998-01-27
+Southern|Janet|Leverling|1995-08-30<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></div>
+<p>答案：结果正确。</p>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">SELECT RegionDescription, FirstName, LastName, bday
+FROM 
+(
+  SELECT RegionId AS rid, MAX(Employee.Birthdate) AS bday 
+  FROM Employee
+    INNER JOIN EmployeeTerritory ON Employee.Id &#x3D; EmployeeTerritory.EmployeeId
+    INNER JOIN Territory ON TerritoryId &#x3D; Territory.Id
+  GROUP BY RegionId
+)
+INNER JOIN (
+            SELECT FirstName, LastName, Birthdate, RegionId, EmployeeId
+            FROM Employee
+              INNER JOIN EmployeeTerritory ON Employee.Id &#x3D; EmployeeTerritory.EmployeeId
+              INNER JOIN Territory ON TerritoryId &#x3D; Territory.Id
+           )
+           ON Birthdate &#x3D; bday AND rid &#x3D; RegionId
+INNER JOIN Region ON Region.Id &#x3D; RegionId
+GROUP BY EmployeeId
+ORDER BY rid;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<h2 id="Q10-15-POINTS-Q10-CHRISTMAS"><a href="#Q10-15-POINTS-Q10-CHRISTMAS" class="headerlink" title="Q10 [15 POINTS] (Q10_CHRISTMAS):"></a>Q10 [15 POINTS] (Q10_CHRISTMAS):</h2><p>Concatenate the <code>ProductName</code>s ordered by the Company <code>&#39;Queen Cozinha&#39;</code> on <code>2014-12-25</code>.</p>
+<p><strong>Details:</strong> Order the products by Id (ascending). Print a single string containing all the dup names separated by commas like <code>Mishi Kobe Niku, NuNuCa Nuß-Nougat-Creme...</code><br><strong>Hint:</strong> You might find <a target="_blank" rel="noopener" href="https://sqlite.org/lang_with.html">Recursive CTEs</a> useful.</p>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">-- 递归查询的练习<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">WITH RECURSIVE res(id, name) AS (
+    SELECT 0, &#39;&#39;
+    UNION ALL
+    SELECT 
+    	id + 1,
+    	name || 
+    	(
+            SELECT a.ProductName
+            FROM
+            	(
+                    SELECT 
+                        b.Id, 
+                        b.ProductName,
+                        ROW_NUMBER() OVER(
+                            ORDER BY b.Id
+                        ) num
+                    FROM
+                        (
+                            SELECT a.Id, b.ProductId
+                            FROM
+                                (
+                                    SELECT a.Id
+                                    FROM
+                                        &#39;Order&#39; a
+                                        JOIN 
+                                        Customer b
+                                        ON a.CustomerId &#x3D; b.Id
+                                    WHERE 
+                                        b.CompanyName &#x3D; &#39;Queen Cozinha&#39; 
+                                        AND 
+                                        DATE(OrderDate) &#x3D; DATE(&#39;2014-12-25&#39;)
+                                ) a
+                                JOIN
+                                OrderDetail b
+                                ON a.Id &#x3D; b.OrderId
+                        ) a
+                        JOIN
+                        Product b
+                        ON a.ProductId &#x3D; b.Id
+                    ORDER BY b.Id
+            	) a
+            	WHERE a.num &#x3D; res.id + 1
+        ) || &#39;, &#39;
+    FROM res
+    WHERE res.id &lt; 9
+)
+SELECT SUBSTR(name, 0, LENGTH(name) - 1)
+FROM res
+WHERE id &#x3D; 9;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">ProductId|ProductName|ROW_NUMBER
+9|Mishi Kobe Niku|1
+25|NuNuCa Nuß-Nougat-Creme|2
+27|Schoggi Schokolade|3
+32|Mascarpone Fabioli|4
+34|Sasquatch Ale|5
+40|Boston Crab Meat|6
+51|Manjimup Dried Apples|7
+74|Longlife Tofu|8
+76|Lakkalikööri|9<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">Mishi Kobe Niku,NuNuCa Nuß-Nougat-Creme,Schoggi Schokolade,Mascarpone Fabioli,Sasquatch Ale,Boston Crab Meat,Manjimup Dried Apples,Longlife Tofu,Lakkalikööri<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div>
+<p>答案：结果错误，两个单词之间应该用逗号和空格隔开。sql语句就是坨屎。可以使用「WITH」语句将查询结果保存为一个临时表，这样方便多次调用查询。</p>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">with p as (
+      select Product.Id, Product.ProductName as name
+      from Product
+            inner join OrderDetail on Product.id &#x3D; OrderDetail.ProductId
+            inner join &#39;Order&#39; on &#39;Order&#39;.Id &#x3D; OrderDetail.OrderId
+            inner join Customer on CustomerId &#x3D; Customer.Id
+      where DATE(OrderDate) &#x3D; &#39;2014-12-25&#39; and CompanyName &#x3D; &#39;Queen Cozinha&#39;
+      group by Product.id
+),
+c as (
+      select row_number() over (order by p.id asc) as seqnum, p.name as name
+      from p
+),
+flattened as (
+      select seqnum, name as name
+      from c
+      where seqnum &#x3D; 1
+      union all
+      select c.seqnum, f.name || &#39;, &#39; || c.name
+      from c join
+            flattened f
+            on c.seqnum &#x3D; f.seqnum + 1
+)
+select name from flattened
+order by seqnum desc limit 1;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<div class="code-wrapper"><pre class="line-numbers language-sqlite" data-language="sqlite"><code class="language-sqlite">Mishi Kobe Niku, NuNuCa Nuß-Nougat-Creme, Schoggi Schokolade, Mascarpone Fabioli, Sasquatch Ale, Boston Crab Meat, Manjimup Dried Apples, Longlife Tofu, Lakkalikööri<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div>
+<h2 id="总体评价"><a href="#总体评价" class="headerlink" title="总体评价"></a>总体评价</h2><p>结果总体正确，有些地方没有注意细节。自己写的sql语句有点像幼儿园，看答案学到很多。</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">算法与数据结构</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+                    
+                      <a class="hover-with-bg" href="/tags/SQL/">SQL</a>
+                    
+                      <a class="hover-with-bg" href="/tags/sqlite/">sqlite</a>
+                    
+                  </div>
+                
+              </div>
+
+              
+                <p class="note note-warning">
+		  <strong>本文作者: </strong><a href="/">MerickBao</a> <br>
+		  <strong>本文链接: </strong><a href="https://merickbao.top/post/%E6%95%B0%E6%8D%AE%E5%BA%93/CMU%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E4%BD%9C%E4%B8%9A%E8%87%AA%E6%9F%A5.html">https://merickbao.top/post/%E6%95%B0%E6%8D%AE%E5%BA%93/CMU%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E4%BD%9C%E4%B8%9A%E8%87%AA%E6%9F%A5.html</a> <br>
+		  <strong>版权声明: </strong>本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                </p>
+              
+
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/post/%E7%AE%97%E6%B3%95/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%89%8D%E7%BC%80%E5%92%8C%E5%B7%AE%E5%88%86.html">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">前缀和&差分</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/post/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B8%B8%E7%94%A8%E5%85%B3%E9%94%AE%E5%AD%97.html">
+                        <span class="hidden-mobile">数据库常用关键字</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#valine",
+          app_id: "C98PibKeXxixh9pLTSwW9s6L-MdYXbMMI",
+          app_key: "DuzfPVdmfW6udONFaQsg4u67",
+          placeholder: "请在～哔～声后留言，～哔～",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+          master: "e145bb51e1173b61bad92a2a36af2e47",
+          friends: "dd229cf217659158ed1a0e1256effb36",
+          tagMeta: ["博主","友人","访客"],
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+    
+  <div>
+  <span id="timeDate">载入天数...</span>
+  <span id="times">载入时分秒...</span>
+  <script>
+  var now = new Date();
+  function createtime(){
+      var grt= new Date("05/20/2021 00:00:00");//此处修改你的建站时间或者网站上线时间
+      now.setTime(now.getTime()+250);
+      days = (now - grt ) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum);
+      hnum = Math.floor(hours);
+      if(String(hnum).length ==1 ){
+          hnum = "0" + hnum;
+      }
+      minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+      mnum = Math.floor(minutes);
+      if(String(mnum).length ==1 ){
+                mnum = "0" + mnum;
+      }
+      seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+      snum = Math.round(seconds);
+      if(String(snum).length ==1 ){
+                snum = "0" + snum;
+      }
+      document.getElementById("timeDate").innerHTML = "已正常运行 &nbsp"+dnum+"&nbsp 天";  //此次自定义显示内容
+      document.getElementById("times").innerHTML = hnum + "&nbsp小时&nbsp" + mnum + "&nbsp分钟&nbsp" + snum + "&nbsp秒";
+  }  //此次自定义显示内容
+  setInterval("createtime()",250);
+  </script>
+</div>
+
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+    
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.2/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
