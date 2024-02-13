@@ -971,7 +971,7 @@
 <h3 id="方案1-Redis实现简单限流"><a href="#方案1-Redis实现简单限流" class="headerlink" title="方案1: Redis实现简单限流"></a>方案1: Redis实现简单限流</h3><p>场景：在指定时间内，最多只允许通过一定数量的请求。</p>
 <p>方案：维护一个滑动窗口，窗口大小为时间区间大小，窗口内的数据条数要小于限定的请求数量。</p>
 <p>具体过程：每来一个请求，就以当前时间的毫秒数作为zset中member的score值，member名称需要保证不重复即可。当当前时间戳和一分钟之前时间戳之间的member数量小于限定值时，就接受该请求，并将该请求写入zset，否则拒绝请求。</p>
-<div class="code-wrapper"><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">zcount key min max <span class="token comment"># 获取score值在区间[min, max]之前的元素数量</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div>
+<div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">zcount key min max <span class="token comment"># 获取score值在区间[min, max]之前的元素数量</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div>
 <h2 id="分布式锁"><a href="#分布式锁" class="headerlink" title="分布式锁"></a>分布式锁</h2><h3 id="方案1-Redis实现分布式锁"><a href="#方案1-Redis实现分布式锁" class="headerlink" title="方案1:Redis实现分布式锁"></a>方案1:Redis实现分布式锁</h3><ul>
 <li>场景：用户抢优惠券，领完一张，优惠券数量减一，领完便不允许再抢。由于采用多台服务器来处理请求，如果不加以限制，便会导致数据不一致发生。</li>
 <li>方案：采用redis实现分布式锁，通过互斥的方式让服务器来对优惠券数量进行操作，防止多个客户端同时去更新优惠券数量。</li>
